@@ -38,8 +38,12 @@ function FlowField() {
 }
 
 export function BackgroundField() {
+  if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return null
+  }
+
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10">
+    <div className="pointer-events-none fixed inset-0 z-0 opacity-70">
       <Canvas camera={{ position: [0, 0, 10], fov: 60 }} dpr={[1, 1.5]}>
         <color attach="background" args={["transparent"]} />
         <ambientLight intensity={0.4} />
