@@ -12,7 +12,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-midnight: 5 15 24;
+  --color-midnight: 3 10 18;
   --color-warm: 244 245 247;
   --color-cyber: 4 217 196;
   --color-royal: 36 107 253;
@@ -24,7 +24,7 @@
 }
 
 :root[data-theme="light"] {
-  --color-midnight: 247 248 251;
+  --color-midnight: 232 236 241;
   --color-warm: 15 23 36;
   --color-cyber: 4 159 140;
   --color-royal: 24 86 220;
@@ -53,6 +53,44 @@ body::before {
     radial-gradient(circle at 50% 80%, rgb(var(--color-amber) / 0.18), transparent 50%);
   filter: blur(0px);
   transition: opacity 0.5s ease;
+}
+
+:root[data-theme="light"] body::before {
+  opacity: 0.7;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgb(var(--color-midnight)) 0%, rgba(0, 0, 0, 0) 45%),
+    radial-gradient(circle at 15% 15%, rgb(var(--color-royal) / 0.15), transparent 45%),
+    radial-gradient(circle at 85% 25%, rgb(var(--color-cyber) / 0.12), transparent 35%),
+    radial-gradient(circle at 40% 80%, rgb(var(--color-amber) / 0.08), transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 90px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 0,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 90px
+    );
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+:root[data-theme="light"] body::after {
+  opacity: 0.3;
+  mix-blend-mode: multiply;
 }
 
 #root {
