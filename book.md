@@ -9,3 +9,4 @@
 - Verified the setup with `npm run build` to ensure TypeScript and the bundler succeed.
 - Documented local development instructions and project layout inside `README.md` so future work has a clear starting point.
 - Added structured data modules (about, contact, experience, projects) to power the upcoming sections.
+- Implemented About and Experience sections leveraging the new data, including stat cards and a vertical impact timeline, and verified via `npm run build`.

@@ -1,4 +1,6 @@
 import { HeroSection } from "./sections/Hero"
+import { AboutSection } from "./sections/About"
+import { ExperienceSection } from "./sections/Experience"
 import { Section } from "./components/layout/Section"
 
 function App() {
@@ -6,12 +8,8 @@ function App() {
     <div className="bg-midnight text-warm">
       <HeroSection />
       <main>
-        <Section id="about" title="About" eyebrow="Profile">
-          Detailed biography and values coming soon.
-        </Section>
-        <Section id="experience" title="Experience" eyebrow="Timeline">
-          Professional and academic experience timeline will be added in the next iteration.
-        </Section>
+        <AboutSection />
+        <ExperienceSection />
         <Section id="projects" title="Projects" eyebrow="Highlights">
           Case studies for the JavaFX media explorer, distributed network platform, and NASM compiler will be showcased here.
         </Section>

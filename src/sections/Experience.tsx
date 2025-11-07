@@ -1,0 +1,50 @@
+import { Section } from "../components/layout/Section"
+import { experiences } from "../data/experience"
+
+const typeBadge: Record<(typeof experiences)[number]["type"], string> = {
+  Internship: "bg-cyber/20 text-cyber",
+  Employment: "bg-warm/10 text-warm/80",
+  Academic: "bg-amber/20 text-amber/90",
+}
+
+export function ExperienceSection() {
+  return (
+    <Section id="experience" title="Experience & impact" eyebrow="Timeline">
+      <div className="relative pl-6">
+        <div className="absolute left-2 top-0 h-full w-px bg-gradient-to-b from-cyber/40 via-warm/20 to-amber/30" />
+        <div className="space-y-10">
+          {experiences.map((item) => (
+            <article key={`${item.company}-${item.role}`} className="relative">
+              <span className="absolute -left-4 top-3 flex h-4 w-4 items-center justify-center rounded-full border border-cyber/50 bg-midnight text-cyber">
+                ·
+              </span>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-card backdrop-blur">
+                <div className="flex flex-wrap items-center gap-3 text-sm text-warm/70">
+                  <span className={`rounded-full px-3 py-1 text-xs font-semibold ${typeBadge[item.type]}`}>
+                    {item.type}
+                  </span>
+                  <span>
+                    {item.start} – {item.end}
+                  </span>
+                  <span>• {item.location}</span>
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-warm">
+                  {item.role}
+                </h3>
+                <p className="text-warm/60">{item.company}</p>
+                <ul className="mt-4 space-y-2 text-sm text-warm/80">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-1 h-1 w-6 rounded-full bg-cyber/60" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </Section>
+  )
+}
