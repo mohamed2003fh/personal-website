@@ -8,3 +8,4 @@
 - Established the base design system primitives (Tailwind config, fonts, global styles), reusable UI components, and the first Hero section with an interactive Three.js point field plus placeholder sections.
 - Verified the setup with `npm run build` to ensure TypeScript and the bundler succeed.
 - Documented local development instructions and project layout inside `README.md` so future work has a clear starting point.
+- Added structured data modules (about, contact, experience, projects) to power the upcoming sections.

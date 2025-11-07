@@ -1,7 +1,7 @@
 export type ContactLink = {
   label: string
   href: string
-  variant?: "primary" | "secondary"
+  variant?: "primary" | "secondary" | "ghost"
 }
 
 export const heroContent = {
@@ -13,14 +13,39 @@ export const heroContent = {
   highlights: [
     "Security audit internship at Tanger Alliance",
     "JavaFX media explorer & distributed messaging projects",
-    "Trilingual collaborator (Arabic / French / English)"
+    "Trilingual collaborator (Arabic / French / English)",
   ],
   actions: [
     { label: "Download CV", href: "/assets/cv/Mohamed_Fhafah_CV.pdf", variant: "primary" },
-    { label: "Contact", href: "mailto:mohamedfhafah975@gmail.com", variant: "secondary" }
+    { label: "Contact", href: "mailto:mohamedfhafah975@gmail.com", variant: "secondary" },
   ] satisfies ContactLink[],
   meta: {
     availability: "Available for internships from May 2025",
-    focus: "Cyber defense • Secure Web • Network automation"
-  }
+    focus: "Cyber defense • Secure Web • Network automation",
+  },
+}
+
+export const aboutContent = {
+  paragraphs: [
+    "I’m a Master 1 Informatique (Fiabilité & Sécurité) student at Aix-Marseille Université, specializing in how secure software, resilient infrastructure, and AI-assisted defenses intersect. I enjoy translating complex risks into intuitive, human-friendly experiences.",
+    "My academic journey spans secure web applications with Flask/JavaScript, advanced Java development, cryptography, and network programming. During my cybersecurity internship at Tanger Alliance I contributed to full security audits, phishing awareness modules, and a machine-learning powered DDoS detection interface.",
+    "Beyond code, I thrive in multicultural contexts, speak Arabic, French, and English, and stay sharp through running and strength training. Collaboration, rigor, and empathy are the lenses through which I approach every project.",
+  ],
+  stats: [
+    { label: "Years coding", value: "5+" },
+    { label: "Technologies", value: "Java · Python · Flask · Three.js" },
+    { label: "Languages", value: "AR / FR / EN" },
+  ],
+}
+
+export const contactDetails = {
+  email: "mohamedfhafah975@gmail.com",
+  phone: "+33 6 56 67 69 64",
+  location: "Marseille, France",
+  availability: "Available for internships from May 2025",
+  timezone: "CET (UTC+1)",
+  socials: [
+    { label: "GitHub", href: "https://github.com/mohamed2003fh", variant: "ghost" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/mohamedfhafah", variant: "ghost" },
+  ] satisfies ContactLink[],
 }
