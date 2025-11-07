@@ -19,5 +19,4 @@
 - Integrated Plausible analytics via a lightweight React component + noscript pixel and refreshed README next steps accordingly.
 - Added a theme system (CSS variables + ThemeProvider + toggle in the navbar) so the site supports both dark and light modes with stored user preference.
 - Overhauled the visual styling with glass panels, gradient tokens, and a site-wide 3D flow-field background animation for extra depth.
-- Ensured the background animation mounts above the page (with reduced-motion guard) so the effect is visible throughout the site.
-- Darkened the global backdrop and layered cyber-style gradients/grids (`body::before/::after`) so the page reads more like a security product experience even in light mode.
+- Ensured the background animation mounts above the page (with reduced-motion guard) so the effect is visible throughout the site, then removed it per request and kept the cyber grid overlay as the primary backdrop.

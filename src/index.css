@@ -59,40 +59,6 @@ body::before {
   opacity: 0.7;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image:
-    linear-gradient(120deg, rgb(var(--color-midnight)) 0%, rgba(0, 0, 0, 0) 45%),
-    radial-gradient(circle at 15% 15%, rgb(var(--color-royal) / 0.15), transparent 45%),
-    radial-gradient(circle at 85% 25%, rgb(var(--color-cyber) / 0.12), transparent 35%),
-    radial-gradient(circle at 40% 80%, rgb(var(--color-amber) / 0.08), transparent 40%),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.03) 0,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 90px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.025) 0,
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px,
-      transparent 90px
-    );
-  opacity: 0.4;
-  mix-blend-mode: screen;
-}
-
-:root[data-theme="light"] body::after {
-  opacity: 0.3;
-  mix-blend-mode: multiply;
-}
-
 #root {
   min-height: 100vh;
 }
@@ -122,6 +88,34 @@ html {
 
 :root[data-theme="light"] .glass-panel {
   box-shadow: 0 20px 60px -35px rgb(var(--color-royal) / 0.35);
+}
+
+.cyber-grid {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgb(var(--color-royal) / 0.18), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgb(var(--color-cyber) / 0.15), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgb(var(--color-amber) / 0.1), transparent 50%);
+}
+
+.cyber-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgb(var(--color-cyber) / 0.35) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  background-size: 180px 180px, 100% 100%;
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
+:root[data-theme="light"] .cyber-grid::after {
+  opacity: 0.35;
+  mix-blend-mode: multiply;
 }
 
 .input-surface {

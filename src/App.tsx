@@ -9,14 +9,13 @@ import { Navbar } from "./components/layout/Navbar"
 import { Footer } from "./components/layout/Footer"
 import { Meta } from "./components/seo/Meta"
 import { Analytics } from "./components/analytics/Analytics"
-import { BackgroundField } from "./components/three/BackgroundField"
 
 function App() {
   return (
     <div className="bg-midnight text-warm">
       <Meta />
       <Analytics />
-      <BackgroundField />
+      <div className="cyber-grid" aria-hidden="true" />
       <div className="relative z-10">
         <a
           href="#main"
