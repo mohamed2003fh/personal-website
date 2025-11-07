@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { Button } from "../ui/Button"
 import { heroContent, navLinks } from "../../data/profile"
+import { useTheme } from "../theme/ThemeProvider"
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   const handleNavClick = (href: string) => {
     setOpen(false)
@@ -30,7 +32,10 @@ export function Navbar() {
             </button>
           ))}
         </nav>
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <Button variant="ghost" onClick={toggleTheme} aria-label="Toggle color mode">
+            {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+          </Button>
           <Button as="a" href={heroContent.actions[0].href} variant="secondary">
             Download CV
           </Button>
@@ -62,6 +67,9 @@ export function Navbar() {
             ))}
             <Button as="a" href={heroContent.actions[0].href} variant="secondary" className="mt-2">
               Download CV
+            </Button>
+            <Button variant="ghost" onClick={toggleTheme}>
+              {theme === "dark" ? "Switch to light" : "Switch to dark"}
             </Button>
           </nav>
         </div>

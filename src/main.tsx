@@ -9,13 +9,16 @@ import { StrictMode, Suspense } from "react"
 import { createRoot } from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
 import App from "./App"
+import { ThemeProvider } from "./components/theme/ThemeProvider"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<div className="p-10 text-warm">Loading...</div>}>
-        <App />
-      </Suspense>
+      <ThemeProvider>
+        <Suspense fallback={<div className="p-10 text-warm">Loading...</div>}>
+          <App />
+        </Suspense>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
 )

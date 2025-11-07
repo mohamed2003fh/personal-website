@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color: #F4F5F7;
-  background-color: #050F18;
+  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-page));
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -12,13 +12,31 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-midnight: 5 15 24;
+  --color-warm: 244 245 247;
+  --color-cyber: 4 217 196;
+  --color-royal: 36 107 253;
+  --color-amber: 255 179 71;
+  --color-page: 5 15 24;
+  --color-text: 244 245 247;
+}
+
+:root[data-theme="light"] {
+  --color-midnight: 247 248 251;
+  --color-warm: 15 23 36;
+  --color-cyber: 4 159 140;
+  --color-royal: 24 86 220;
+  --color-amber: 245 160 60;
+  --color-page: 249 250 252;
+  --color-text: 15 23 36;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: #050F18;
-  color: #F4F5F7;
+  background-color: rgb(var(--color-page));
+  color: rgb(var(--color-text));
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body::before {
@@ -26,9 +44,9 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: radial-gradient(circle at 20% 20%, rgba(4, 217, 196, 0.25), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(36, 107, 253, 0.3), transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(255, 179, 71, 0.18), transparent 50%);
+  background-image: radial-gradient(circle at 20% 20%, rgb(var(--color-cyber) / 0.25), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgb(var(--color-royal) / 0.3), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgb(var(--color-amber) / 0.18), transparent 50%);
   filter: blur(0px);
 }
 
@@ -37,8 +55,8 @@ body::before {
 }
 
 ::selection {
-  background: rgba(4, 217, 196, 0.4);
-  color: #050F18;
+  background: rgb(var(--color-cyber) / 0.4);
+  color: rgb(var(--color-midnight));
 }
 
 html {

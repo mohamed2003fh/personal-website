@@ -48,6 +48,7 @@
 - Use scroll-based storytelling in hero (e.g., typewriter effect for title) but keep motion reduced preference support.
 - Provide bilingual toggle (FR ↔ EN) using i18n JSON to cater to French and international recruiters.
 - Ensure forms have inline validation, fallback mailto link, and success/failure states.
+- Offer a persistent light/dark toggle so recruiters can match OS preferences.
 
 ## 6. Technical Stack & Architecture
 - **Framework**: React 19 + TypeScript, bootstrapped with Vite for fast HMR, code splitting, and SPA-friendly SEO enhancements.
