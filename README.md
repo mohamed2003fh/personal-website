@@ -57,7 +57,7 @@
 - **Components**: Design system (Button, SectionHeading, Card, Timeline, Badge, SkillChip, Stat, CanvasScene) with accessibility hooks and test coverage.
 - **Performance**: Vite image plugins/`vite-imagetools`, font preloading, Three.js scene lazy loading, `prefers-reduced-motion` guards, Lighthouse ≥ 90 target.
 - **Accessibility**: Semantic landmarks, ARIA for interactive/3D controls (provide reduced-motion and static fallbacks), focus outlines that meet contrast requirements.
-- **Analytics & SEO**: Plausible/Umami for analytics; `react-helmet-async` for metadata, JSON-LD injection, sitemap generation via `vite-plugin-sitemap`.
+- **Analytics & SEO**: Plausible analytics (script + noscript pixel) with a custom Meta component for OG/Twitter tags and JSON-LD injection; sitemap generation via `vite-plugin-sitemap` remains optional.
 - **Deployment**: GitHub repo -> CI (GitHub Actions with pnpm) -> Vercel or Netlify static hosting; configure custom domain, HTTPS, resume assets, OG images.
 
 ## 7. Implementation Roadmap
@@ -91,7 +91,7 @@
 2. Supply/confirm bilingual copy blocks (Hero tagline, About paragraph, project blurbs).
 3. Decide on hosting platform (default: Vercel) and domain name.
 4. Gather/produce imagery assets; otherwise brief AI/graphic creation.
-5. Connect the contact form to a backend or form service, and wire up analytics/i18n before launch.
+5. Connect the contact form to a backend or form service, and wire up the bilingual (FR/EN) toggle before launch.
 
 ## 11. Local Development Setup
 1. **Requirements**: Node.js 20+, npm 10+, Git.

@@ -16,3 +16,4 @@
 - Added a sticky navigation bar, skip link, smooth scrolling, and a footer with socials/resume links to complete the site framework; documented new asset paths.
 - Produced branded SVG mockups for each project, updated data references, and marked project visuals complete in the README.
 - Implemented an SEO metadata system (custom Meta component + JSON-LD graph) to set document titles, social previews, and structured data without external dependencies.
+- Integrated Plausible analytics via a lightweight React component + noscript pixel and refreshed README next steps accordingly.
