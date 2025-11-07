@@ -91,4 +91,24 @@
 2. Supply/confirm bilingual copy blocks (Hero tagline, About paragraph, project blurbs).
 3. Decide on hosting platform (default: Vercel) and domain name.
 4. Gather/produce imagery assets; otherwise brief AI/graphic creation.
-5. Create Git repository and initialize the React 19 + TypeScript (Vite) project with Three.js dependencies following this plan.
+5. Expand section content (About, Experience, Projects, Contact) inside the newly scaffolded React 19 + TypeScript (Vite) codebase.
+
+## 11. Local Development Setup
+1. **Requirements**: Node.js 20+, npm 10+, Git.
+2. **Install**:
+   ```bash
+   npm install
+   ```
+3. **Run locally**:
+   ```bash
+   npm run dev
+   ```
+   The dev server starts at `http://localhost:5173`.
+4. **Quality checks**:
+   - `npm run build` for production bundles (tsc + Vite).
+   - `npm run lint` for ESLint (React hooks/config included).
+5. **Project layout**:
+   - `src/sections` holds page sections (Hero ready, others pending).
+   - `src/components` contains reusable UI/layout/Three.js helpers.
+   - `src/data` stores structured content (hero copy, upcoming sections).
+   - `public/assets/cv` contains the downloadable resume linked from the hero CTA.
