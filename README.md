@@ -14,7 +14,7 @@
 | Collaborators & peers | Insight into interests, ongoing work, how to collaborate | Mention of research interests (cyber defense, AI), open-source or study projects.
 
 ## 3. Content Narrative & Information Architecture
-1. **Hero**: Name, title ("Cybersecurity-focused Software Engineer"), location (Marseille), summary line, CTA buttons (Download CV, Contact, LinkedIn/GitHub) plus an interactive Three.js scene (network nodes/particle field) responding to cursor movement.
+1. **Hero**: Name, title ("Cybersecurity-focused Software Engineer"), location (Marseille), summary line, CTA buttons (Download CV, Contact, LinkedIn/GitHub) plus an interactive Three.js scene (network nodes/particle field) and an overlaid portrait photo responding to cursor movement.
 2. **About**: Story-driven paragraph covering Master 1 (FSI), passion for cyber defense & AI, adaptability from multicultural background, soft skills.
 3. **Core Expertise / Services**: Cards for Security Audits, Secure Web Development (Flask/JS), Networked Systems & Automation.
 4. **Skills Matrix**: Categorized chips (Programming, Web, Databases, Tooling, Soft Skills, Languages).
@@ -73,7 +73,7 @@
 
 ## 8. Content & Asset Checklist
 - ✅ Current CV PDFs (EN/FR) for download & copywriting.
-- 🔲 Professional photo (neutral background) or illustration.
+- ✅ Professional photo (neutral background) or illustration.
 - 🔲 Project visuals (screenshots of JavaFX app, network app diagrams, compiler console capture).
 - 🔲 Logo/wordmark (optional monogram "MF").
 - 🔲 Testimonials or quotes (professors, supervisors) to validate credibility.
@@ -108,8 +108,8 @@
    - `npm run build` for production bundles (tsc + Vite).
    - `npm run lint` for ESLint (React hooks/config included).
 5. **Project layout**:
-   - `src/sections` holds page sections (Hero ready, others pending).
+   - `src/sections` holds page sections (Hero, About, Skills, Experience, Projects, Education, Contact).
    - `src/components` contains reusable UI/layout/Three.js helpers.
-   - `src/data` stores structured content (hero copy, upcoming sections).
+   - `src/data` stores structured content (hero/about/contact, experience timeline, skills/services, education, projects).
    - `public/assets/cv` contains the downloadable resume linked from the hero CTA.
 6. **Contact form**: The current form opens a pre-filled email draft via `mailto:` for secure, no-backend communication. Swap this for a serverless endpoint when ready.

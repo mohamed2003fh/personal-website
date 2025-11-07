@@ -11,3 +11,5 @@
 - Added structured data modules (about, contact, experience, projects) to power the upcoming sections.
 - Implemented About and Experience sections leveraging the new data, including stat cards and a vertical impact timeline, and verified via `npm run build`.
 - Shipped Projects and Contact sections with data-driven cards, social CTAs, and a mailto-backed form, then documented the contact behavior in the README.
+- Added the provided portrait to `public/assets/images/profile.jpg` and layered it into the hero card alongside the Three.js point field.
+- Created data + UI for the Skills/Services grid and Education timeline, updated README assets checklist, and ran `npm run build` to validate.

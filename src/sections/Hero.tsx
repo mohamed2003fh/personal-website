@@ -59,6 +59,17 @@ export function HeroSection() {
         <div className="relative flex-1">
           <div className="aspect-square w-full max-w-lg rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur">
             <HeroCanvas />
+            <div className="absolute inset-8 overflow-hidden rounded-[1.5rem] border border-white/15 shadow-card">
+              <img
+                src="/assets/images/profile.jpg"
+                alt="Portrait of Mohamed Fhafah"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="absolute bottom-6 right-6 rounded-2xl border border-white/20 bg-midnight/80 px-4 py-2 text-xs font-mono text-warm/80 shadow-card">
+              <p>Cyber Defense • Secure Web • AI</p>
+            </div>
           </div>
         </div>
       </div>
