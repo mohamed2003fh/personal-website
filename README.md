@@ -78,7 +78,7 @@
 - 🔲 Logo/wordmark (optional monogram "MF").
 - 🔲 Testimonials or quotes (professors, supervisors) to validate credibility.
 - 🔲 Short bio snippets for About (FR & EN).
-- 🔲 Metadata descriptions (160 chars) + social media handles.
+- ✅ Metadata descriptions (160 chars) + social media handles.
 
 ## 9. Risk & Mitigation Notes
 - **Limited visual assets** → Use abstract generative backgrounds + typography-first layout until photos ready.
