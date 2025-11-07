@@ -41,6 +41,7 @@
 - **Typography**: Headings - "Space Grotesk" (600 weight) for futuristic feel; Body - "Inter" (400/500) for readability; monospace accent - "JetBrains Mono" for code snippets.
 - **Imagery**: Abstract geometric patterns, circuit/mesh gradients, subtle grain overlays. Include professional portrait or silhouette; add mockups for projects.
 - **Iconography**: Simple line icons (Lucide/Feather). Maintain stroke weight consistency.
+- **Surfaces & Backgrounds**: Glassmorphic panels layered on top of a live 3D particle field that adapts to light/dark mode preferences.
 
 ## 5. Interaction & UX Guidelines
 - Sticky top navigation with smooth scroll and section highlighting.
@@ -49,6 +50,7 @@
 - Provide bilingual toggle (FR ↔ EN) using i18n JSON to cater to French and international recruiters.
 - Ensure forms have inline validation, fallback mailto link, and success/failure states.
 - Offer a persistent light/dark toggle so recruiters can match OS preferences.
+- Keep the 3D flow-field background performant (pointer-events disabled, respects `prefers-reduced-motion` via future enhancement).
 
 ## 6. Technical Stack & Architecture
 - **Framework**: React 19 + TypeScript, bootstrapped with Vite for fast HMR, code splitting, and SPA-friendly SEO enhancements.

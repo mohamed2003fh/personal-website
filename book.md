@@ -18,3 +18,4 @@
 - Implemented an SEO metadata system (custom Meta component + JSON-LD graph) to set document titles, social previews, and structured data without external dependencies.
 - Integrated Plausible analytics via a lightweight React component + noscript pixel and refreshed README next steps accordingly.
 - Added a theme system (CSS variables + ThemeProvider + toggle in the navbar) so the site supports both dark and light modes with stored user preference.
+- Overhauled the visual styling with glass panels, gradient tokens, and a site-wide 3D flow-field background animation for extra depth.

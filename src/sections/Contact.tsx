@@ -19,9 +19,14 @@ export function ContactSection() {
   }
 
   return (
-    <Section id="contact" title="Let’s collaborate" eyebrow="Contact">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-card">
+    <Section
+      id="contact"
+      title="Let’s collaborate"
+      eyebrow="Contact"
+      frameless
+      contentClassName="grid gap-10 lg:grid-cols-2"
+    >
+      <div className="glass-panel p-6">
           <p className="text-sm uppercase tracking-[0.3em] text-warm/50">
             {contactDetails.availability}
           </p>
@@ -60,7 +65,7 @@ export function ContactSection() {
             ))}
           </div>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-midnight/40 p-6 backdrop-blur">
+      <div className="glass-panel p-6">
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="text-sm text-warm/60" htmlFor="name">
@@ -70,7 +75,7 @@ export function ContactSection() {
                 id="name"
                 name="name"
                 type="text"
-                className="mt-1 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-warm focus:border-cyber focus:outline-none"
+                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
                 placeholder="Your name"
               />
             </div>
@@ -83,7 +88,7 @@ export function ContactSection() {
                 name="email"
                 type="email"
                 required
-                className="mt-1 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-warm focus:border-cyber focus:outline-none"
+                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
                 placeholder="you@example.com"
               />
             </div>
@@ -95,7 +100,7 @@ export function ContactSection() {
                 id="message"
                 name="message"
                 rows={4}
-                className="mt-1 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-warm focus:border-cyber focus:outline-none"
+                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
                 placeholder="Tell me about the challenge you want to solve."
               />
             </div>
@@ -107,7 +112,6 @@ export function ContactSection() {
               and streamlined.
             </p>
           </form>
-        </div>
       </div>
     </Section>
   )

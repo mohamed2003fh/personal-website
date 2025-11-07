@@ -19,6 +19,8 @@
   --color-amber: 255 179 71;
   --color-page: 5 15 24;
   --color-text: 244 245 247;
+  --color-surface: 11 20 33;
+  --color-border: 220 230 244;
 }
 
 :root[data-theme="light"] {
@@ -29,6 +31,8 @@
   --color-amber: 245 160 60;
   --color-page: 249 250 252;
   --color-text: 15 23 36;
+  --color-surface: 255 255 255;
+  --color-border: 40 60 95;
 }
 
 body {
@@ -48,6 +52,7 @@ body::before {
     radial-gradient(circle at 80% 0%, rgb(var(--color-royal) / 0.3), transparent 40%),
     radial-gradient(circle at 50% 80%, rgb(var(--color-amber) / 0.18), transparent 50%);
   filter: blur(0px);
+  transition: opacity 0.5s ease;
 }
 
 #root {
@@ -61,4 +66,35 @@ body::before {
 
 html {
   scroll-behavior: smooth;
+}
+
+.glass-panel {
+  position: relative;
+  border-radius: 28px;
+  border: 1px solid rgb(var(--color-border) / 0.2);
+  background: linear-gradient(
+      145deg,
+      rgb(var(--color-surface) / 0.85),
+      rgb(var(--color-surface) / 0.55)
+    ),
+    linear-gradient(120deg, rgb(var(--color-cyber) / 0.03), transparent);
+  box-shadow: 0 30px 80px -40px rgb(var(--color-royal) / 0.5);
+  backdrop-filter: blur(30px) saturate(140%);
+}
+
+:root[data-theme="light"] .glass-panel {
+  box-shadow: 0 20px 60px -35px rgb(var(--color-royal) / 0.35);
+}
+
+.input-surface {
+  background: rgb(var(--color-surface) / 0.7);
+  border: 1px solid rgb(var(--color-border) / 0.35);
+  color: rgb(var(--color-text));
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-surface:focus {
+  border-color: rgb(var(--color-cyber));
+  box-shadow: 0 0 0 2px rgb(var(--color-cyber) / 0.25);
+  outline: none;
 }
