@@ -91,7 +91,7 @@
 2. Supply/confirm bilingual copy blocks (Hero tagline, About paragraph, project blurbs).
 3. Decide on hosting platform (default: Vercel) and domain name.
 4. Gather/produce imagery assets; otherwise brief AI/graphic creation.
-5. Expand section content (About, Experience, Projects, Contact) inside the newly scaffolded React 19 + TypeScript (Vite) codebase.
+5. Connect the contact form to a backend or form service, and wire up analytics/i18n before launch.
 
 ## 11. Local Development Setup
 1. **Requirements**: Node.js 20+, npm 10+, Git.
@@ -112,3 +112,4 @@
    - `src/components` contains reusable UI/layout/Three.js helpers.
    - `src/data` stores structured content (hero copy, upcoming sections).
    - `public/assets/cv` contains the downloadable resume linked from the hero CTA.
+6. **Contact form**: The current form opens a pre-filled email draft via `mailto:` for secure, no-backend communication. Swap this for a serverless endpoint when ready.
