@@ -112,4 +112,5 @@
    - `src/components` contains reusable UI/layout/Three.js helpers.
    - `src/data` stores structured content (hero/about/contact, experience timeline, skills/services, education, projects).
    - `public/assets/cv` contains the downloadable resume linked from the hero CTA.
+   - `public/assets/images` holds the portrait and future visual assets.
 6. **Contact form**: The current form opens a pre-filled email draft via `mailto:` for secure, no-backend communication. Swap this for a serverless endpoint when ready.

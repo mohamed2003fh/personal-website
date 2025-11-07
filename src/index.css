@@ -40,3 +40,7 @@ body::before {
   background: rgba(4, 217, 196, 0.4);
   color: #050F18;
 }
+
+html {
+  scroll-behavior: smooth;
+}

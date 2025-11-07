@@ -4,7 +4,7 @@ import { heroContent } from "../data/profile"
 
 export function HeroSection() {
   return (
-    <header className="relative overflow-hidden py-24">
+    <header id="hero" className="relative overflow-hidden py-24">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 lg:flex-row lg:items-center">
         <div className="relative z-10 flex-1">
           <p className="text-sm uppercase tracking-[0.5em] text-cyber">
