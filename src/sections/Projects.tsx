@@ -11,6 +11,9 @@ export function ProjectsSection() {
             key={project.title}
             className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 shadow-card backdrop-blur"
           >
+            <figure className="overflow-hidden rounded-2xl border border-white/10">
+              <img src={project.image} alt={project.imageAlt} className="h-48 w-full object-cover" loading="lazy" />
+            </figure>
             <p className="text-xs uppercase tracking-[0.3em] text-warm/50">{project.timeline}</p>
             <h3 className="mt-3 text-2xl font-semibold text-warm">{project.title}</h3>
             <p className="mt-3 text-sm text-warm/70">{project.description}</p>

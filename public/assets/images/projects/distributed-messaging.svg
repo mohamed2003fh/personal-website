@@ -1,0 +1,26 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" rx="48" fill="#071826"/>
+  <rect x="48" y="48" width="864" height="504" rx="40" fill="url(#gradientBackground)"/>
+  <g opacity="0.7">
+    <path d="M160 220C220 140 320 140 380 220C440 300 540 300 600 220C660 140 760 140 820 220" stroke="#04D9C4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M160 320C220 240 320 240 380 320C440 400 540 400 600 320C660 240 760 240 820 320" stroke="#246BFD" stroke-width="4" stroke-linecap="round"/>
+    <path d="M160 420C220 340 320 340 380 420C440 500 540 500 600 420C660 340 760 340 820 420" stroke="#FFB347" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g fill="#0F2536" stroke="#143048" stroke-width="2">
+    <rect x="180" y="180" width="120" height="80" rx="16"/>
+    <rect x="340" y="180" width="120" height="80" rx="16"/>
+    <rect x="500" y="180" width="120" height="80" rx="16"/>
+    <rect x="660" y="180" width="120" height="80" rx="16"/>
+    <rect x="260" y="360" width="120" height="80" rx="16"/>
+    <rect x="420" y="360" width="120" height="80" rx="16"/>
+    <rect x="580" y="360" width="120" height="80" rx="16"/>
+  </g>
+  <text x="120" y="500" fill="#F4F5F7" font-family="Space Grotesk" font-size="26" font-weight="600">Distributed Messaging Platform</text>
+  <text x="120" y="536" fill="#9FB1C7" font-family="Inter" font-size="16">TCP/UDP · fault tolerance · observability</text>
+  <defs>
+    <linearGradient id="gradientBackground" x1="48" y1="48" x2="912" y2="552" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#041121"/>
+      <stop offset="1" stop-color="#10263A"/>
+    </linearGradient>
+  </defs>
+</svg>

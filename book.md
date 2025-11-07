@@ -14,3 +14,4 @@
 - Added the provided portrait to `public/assets/images/profile.jpg` and layered it into the hero card alongside the Three.js point field.
 - Created data + UI for the Skills/Services grid and Education timeline, updated README assets checklist, and ran `npm run build` to validate.
 - Added a sticky navigation bar, skip link, smooth scrolling, and a footer with socials/resume links to complete the site framework; documented new asset paths.
+- Produced branded SVG mockups for each project, updated data references, and marked project visuals complete in the README.

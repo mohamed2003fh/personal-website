@@ -1,0 +1,23 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" rx="48" fill="#071826"/>
+  <rect x="60" y="60" width="840" height="480" rx="36" fill="url(#background)"/>
+  <rect x="120" y="140" width="720" height="360" rx="28" fill="rgba(5, 15, 24, 0.8)" stroke="#0D2C43" stroke-width="2"/>
+  <text x="160" y="200" fill="#04D9C4" font-family="JetBrains Mono" font-size="20">TOKEN &lt;identifier&gt;</text>
+  <text x="160" y="240" fill="#F4F5F7" font-family="JetBrains Mono" font-size="18">PARSE  ::=  expr  |  stmt</text>
+  <text x="160" y="280" fill="#F4F5F7" font-family="JetBrains Mono" font-size="18">EMIT   mov eax, [value]</text>
+  <text x="160" y="320" fill="#F4F5F7" font-family="JetBrains Mono" font-size="18">EMIT   add eax, ebx</text>
+  <text x="160" y="360" fill="#9FB1C7" font-family="JetBrains Mono" font-size="18">CHECK  stack balance OK</text>
+  <rect x="520" y="220" width="240" height="200" rx="24" fill="#0F2536" stroke="#143048" stroke-width="2"/>
+  <rect x="540" y="240" width="200" height="32" rx="16" fill="#041121"/>
+  <rect x="540" y="288" width="200" height="32" rx="16" fill="#041121"/>
+  <rect x="540" y="336" width="200" height="32" rx="16" fill="#041121"/>
+  <text x="140" y="450" fill="#F4F5F7" font-family="Space Grotesk" font-size="26" font-weight="600">MASM Mini-Compiler</text>
+  <text x="140" y="486" fill="#9FB1C7" font-family="Inter" font-size="16">Lexing · syntax trees · NASM output</text>
+  <defs>
+    <linearGradient id="background" x1="60" y1="60" x2="900" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#041121"/>
+      <stop offset="0.5" stop-color="#0B1F32"/>
+      <stop offset="1" stop-color="#071826"/>
+    </linearGradient>
+  </defs>
+</svg>

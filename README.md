@@ -74,7 +74,7 @@
 ## 8. Content & Asset Checklist
 - ✅ Current CV PDFs (EN/FR) for download & copywriting.
 - ✅ Professional photo (neutral background) or illustration.
-- 🔲 Project visuals (screenshots of JavaFX app, network app diagrams, compiler console capture).
+- ✅ Project visuals (screenshots of JavaFX app, network app diagrams, compiler console capture).
 - 🔲 Logo/wordmark (optional monogram "MF").
 - 🔲 Testimonials or quotes (professors, supervisors) to validate credibility.
 - 🔲 Short bio snippets for About (FR & EN).
