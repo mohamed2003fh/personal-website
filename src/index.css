@@ -166,3 +166,39 @@ html {
   object-fit: cover;
   border-radius: 28px;
 }
+
+.about-orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  right: -120px;
+  background: radial-gradient(circle, rgb(var(--color-royal) / 0.25), transparent 70%);
+  filter: blur(6px);
+  animation: aboutFloat 12s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes aboutFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-30px, 25px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.flag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgb(var(--color-border) / 0.35);
+  background: rgb(var(--color-surface) / 0.8);
+  font-size: 0.85rem;
+  color: rgb(var(--color-text));
+}

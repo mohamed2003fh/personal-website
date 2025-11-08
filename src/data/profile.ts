@@ -36,6 +36,11 @@ export const aboutContent = {
     { label: "Technologies", value: "Java · Python · Flask · Three.js" },
     { label: "Languages", value: "AR / FR / EN" },
   ],
+  languages: [
+    { flag: "🇲🇦", label: "Arabic · Native" },
+    { flag: "🇫🇷", label: "French · Fluent" },
+    { flag: "🇬🇧", label: "English · Fluent" },
+  ],
 }
 
 export const contactDetails = {
