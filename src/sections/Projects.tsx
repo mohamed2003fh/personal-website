@@ -1,13 +1,15 @@
 import { Section } from "../components/layout/Section"
 import { projects } from "../data/projects"
 import { Button } from "../components/ui/Button"
+import { useI18n } from "../i18n/I18nProvider"
 
 export function ProjectsSection() {
+  const { t } = useI18n()
   return (
     <Section
       id="projects"
-      title="Selected projects"
-      eyebrow="Highlights"
+      title={t.projects.title}
+      eyebrow={t.projects.eyebrow}
       frameless
       contentClassName="grid gap-8 lg:grid-cols-3"
     >

@@ -1,12 +1,14 @@
 import { Section } from "../components/layout/Section"
 import { services, skillGroups } from "../data/skills"
+import { useI18n } from "../i18n/I18nProvider"
 
 export function SkillsSection() {
+  const { t } = useI18n()
   return (
     <Section
       id="skills"
-      title="Expertise & toolset"
-      eyebrow="Capabilities"
+      title={t.skills.title}
+      eyebrow={t.skills.eyebrow}
       frameless
       contentClassName="space-y-10"
     >

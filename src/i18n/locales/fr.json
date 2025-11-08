@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact",
+    "download": "Télécharger le CV"
+  },
+  "hero": {
+    "location_label": "Disponible · {{location}}",
+    "focus": "Spécialités",
+    "availability": "Disponibilité",
+    "availability_value": "Disponible pour un stage dès mai 2025",
+    "cta_download": "Télécharger le CV",
+    "cta_contact": "Me contacter",
+    "tagline": "Ingénieur logiciel orienté cybersécurité",
+    "summary": "Étudiant en Master 1 Informatique (Fiabilité & Sécurité) concevant des plateformes web résilientes, des systèmes réseau sécurisés et des défenses assistées par IA."
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Ingénierie orientée sécurité",
+    "years": "années de code",
+    "security_focus": "Axes sécurité",
+    "technologies": "Technologies",
+    "languages": "Langues",
+    "paragraphs": [
+      "Je suis étudiant en Master 1 Informatique à Aix-Marseille Université, spécialisé dans les logiciels sécurisés, les infrastructures résilientes et les défenses assistées par l’IA.",
+      "Mon parcours couvre les applications web sécurisées avec Flask/JavaScript, le développement Java avancé, la cryptographie et la programmation réseau.",
+      "En dehors du code, j’évolue dans des contextes multiculturels, parle arabe, français et anglais, et reste en forme grâce à la course et la musculation."
+    ]
+  },
+  "skills": {
+    "eyebrow": "Capacités",
+    "title": "Expertises & outils"
+  },
+  "experience": {
+    "eyebrow": "Parcours",
+    "title": "Expérience & impact"
+  },
+  "projects": {
+    "eyebrow": "Réalisations",
+    "title": "Projets sélectionnés"
+  },
+  "education": {
+    "eyebrow": "Formation",
+    "title": "Parcours académique"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Travaillons ensemble",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "details": "Détails du projet",
+      "button": "Préparer l’email"
+    },
+    "message": "Je réponds rapidement par email, mais vous pouvez aussi me joindre sur LinkedIn ou GitHub pour en savoir plus sur mes projets.",
+    "respects": "Ce formulaire ouvre votre client mail avec un message prérempli pour garder un échange sécurisé."
+  }
+}

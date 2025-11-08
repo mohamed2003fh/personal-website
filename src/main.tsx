@@ -10,15 +10,18 @@ import { createRoot } from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import { ThemeProvider } from "./components/theme/ThemeProvider"
+import { I18nProvider } from "./i18n/I18nProvider"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <ThemeProvider>
-        <Suspense fallback={<div className="p-10 text-warm">Loading...</div>}>
-          <App />
-        </Suspense>
-      </ThemeProvider>
+      <I18nProvider>
+        <ThemeProvider>
+          <Suspense fallback={<div className="p-10 text-warm">Loading...</div>}>
+            <App />
+          </Suspense>
+        </ThemeProvider>
+      </I18nProvider>
     </BrowserRouter>
   </StrictMode>
 )

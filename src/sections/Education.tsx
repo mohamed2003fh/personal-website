@@ -1,9 +1,11 @@
 import { Section } from "../components/layout/Section"
 import { education } from "../data/education"
+import { useI18n } from "../i18n/I18nProvider"
 
 export function EducationSection() {
+  const { t } = useI18n()
   return (
-    <Section id="education" title="Academic journey" eyebrow="Education" frameless contentClassName="space-y-8">
+    <Section id="education" title={t.education.title} eyebrow={t.education.eyebrow} frameless contentClassName="space-y-8">
       {education.map((entry) => (
         <article key={`${entry.school}-${entry.program}`} className="glass-panel p-6">
           <div className="flex flex-wrap items-center gap-3 text-sm text-warm/70">

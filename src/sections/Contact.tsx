@@ -2,8 +2,10 @@ import type { FormEvent } from "react"
 import { Section } from "../components/layout/Section"
 import { Button } from "../components/ui/Button"
 import { contactDetails } from "../data/profile"
+import { useI18n } from "../i18n/I18nProvider"
 
 export function ContactSection() {
+  const { t } = useI18n()
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
@@ -21,97 +23,89 @@ export function ContactSection() {
   return (
     <Section
       id="contact"
-      title="Let’s collaborate"
-      eyebrow="Contact"
+      title={t.contact.title}
+      eyebrow={t.contact.eyebrow}
       frameless
       contentClassName="grid gap-10 lg:grid-cols-2"
     >
       <div className="glass-panel p-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-warm/50">
-            {contactDetails.availability}
-          </p>
-          <h3 className="mt-3 text-3xl font-heading text-warm">Ready for your next security mission.</h3>
-          <p className="mt-4 text-sm text-warm/70">
-            I respond fastest via email, but you can also reach me on LinkedIn or GitHub if you’d like to learn
-            more about the code powering these projects.
-          </p>
-          <dl className="mt-6 space-y-4 text-sm">
-            <div>
-              <dt className="text-warm/40">Email</dt>
-              <dd>
-                <a href={`mailto:${contactDetails.email}`} className="text-cyber">
-                  {contactDetails.email}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-warm/40">Phone</dt>
-              <dd className="text-warm/80">{contactDetails.phone}</dd>
-            </div>
-            <div>
-              <dt className="text-warm/40">Location</dt>
-              <dd className="text-warm/80">{contactDetails.location}</dd>
-            </div>
-            <div>
-              <dt className="text-warm/40">Timezone</dt>
-              <dd className="text-warm/80">{contactDetails.timezone}</dd>
-            </div>
-          </dl>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {contactDetails.socials.map((link) => (
-              <Button key={link.label} as="a" href={link.href} variant={link.variant} target="_blank" rel="noreferrer">
-                {link.label}
-              </Button>
-            ))}
+        <p className="text-sm uppercase tracking-[0.3em] text-warm/50">{contactDetails.availability}</p>
+        <h3 className="mt-3 text-3xl font-heading text-warm">Ready for your next security mission.</h3>
+        <p className="mt-4 text-sm text-warm/70">{t.contact.message}</p>
+        <dl className="mt-6 space-y-4 text-sm">
+          <div>
+            <dt className="text-warm/40">Email</dt>
+            <dd>
+              <a href={`mailto:${contactDetails.email}`} className="text-cyber">
+                {contactDetails.email}
+              </a>
+            </dd>
           </div>
-        </div>
-      <div className="glass-panel p-6">
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div>
-              <label className="text-sm text-warm/60" htmlFor="name">
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
-                placeholder="Your name"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-warm/60" htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
-                placeholder="you@example.com"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-warm/60" htmlFor="message">
-                Project details
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
-                placeholder="Tell me about the challenge you want to solve."
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              Open email draft
+          <div>
+            <dt className="text-warm/40">Phone</dt>
+            <dd className="text-warm/80">{contactDetails.phone}</dd>
+          </div>
+          <div>
+            <dt className="text-warm/40">Location</dt>
+            <dd className="text-warm/80">{contactDetails.location}</dd>
+          </div>
+          <div>
+            <dt className="text-warm/40">Timezone</dt>
+            <dd className="text-warm/80">{contactDetails.timezone}</dd>
+          </div>
+        </dl>
+        <div className="mt-6 flex flex-wrap gap-3">
+          {contactDetails.socials.map((link) => (
+            <Button key={link.label} as="a" href={link.href} variant={link.variant} target="_blank" rel="noreferrer">
+              {link.label}
             </Button>
-            <p className="text-xs text-warm/50">
-              The form opens your default email client with a pre-filled message so we can keep communication secure
-              and streamlined.
-            </p>
-          </form>
+          ))}
+        </div>
+      </div>
+      <div className="glass-panel p-6">
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <div>
+            <label className="text-sm text-warm/60" htmlFor="name">
+              {t.contact.form.name}
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label className="text-sm text-warm/60" htmlFor="email">
+              {t.contact.form.email}
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div>
+            <label className="text-sm text-warm/60" htmlFor="message">
+              {t.contact.form.details}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              className="input-surface mt-1 w-full rounded-2xl px-4 py-3"
+              placeholder="Tell me about the challenge you want to solve."
+            />
+          </div>
+          <Button type="submit" className="w-full">
+            {t.contact.form.button}
+          </Button>
+          <p className="text-xs text-warm/50">{t.contact.respects}</p>
+        </form>
       </div>
     </Section>
   )

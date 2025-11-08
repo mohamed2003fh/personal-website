@@ -1,5 +1,6 @@
 import { Section } from "../components/layout/Section"
 import { experiences } from "../data/experience"
+import { useI18n } from "../i18n/I18nProvider"
 
 const typeBadge: Record<(typeof experiences)[number]["type"], string> = {
   Internship: "bg-cyber/20 text-cyber",
@@ -8,8 +9,9 @@ const typeBadge: Record<(typeof experiences)[number]["type"], string> = {
 }
 
 export function ExperienceSection() {
+  const { t } = useI18n()
   return (
-    <Section id="experience" title="Experience & impact" eyebrow="Timeline" frameless>
+    <Section id="experience" title={t.experience.title} eyebrow={t.experience.eyebrow} frameless>
       <div className="glass-panel relative p-8">
         <div className="absolute left-8 top-10 bottom-10 w-px bg-gradient-to-b from-cyber/40 via-warm/20 to-amber/30" />
         <div className="space-y-10 pl-10">

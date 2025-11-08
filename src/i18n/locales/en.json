@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "download": "Download CV"
+  },
+  "hero": {
+    "location_label": "Available · {{location}}",
+    "focus": "Focus",
+    "availability": "Availability",
+    "availability_value": "Available for internships from May 2025",
+    "cta_download": "Download CV",
+    "cta_contact": "Contact",
+    "tagline": "Cybersecurity-focused Software Engineer",
+    "summary": "Master 1 Informatique (Fiabilité & Sécurité) student crafting resilient web platforms, secure networked systems, and AI-assisted defenses."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Secure-by-design engineering",
+    "years": "years coding",
+    "security_focus": "Security focus",
+    "technologies": "Technologies",
+    "languages": "Languages",
+    "paragraphs": [
+      "I’m a Master 1 Informatique student at Aix-Marseille Université, specializing in secure software, resilient infrastructure, and AI-assisted defenses.",
+      "My academic journey spans secure web applications with Flask/JavaScript, advanced Java development, cryptography, and network programming.",
+      "Beyond code, I thrive in multicultural contexts, speak Arabic, French, and English, and stay sharp through running and strength training."
+    ]
+  },
+  "skills": {
+    "eyebrow": "Capabilities",
+    "title": "Expertise & toolset"
+  },
+  "experience": {
+    "eyebrow": "Timeline",
+    "title": "Experience & impact"
+  },
+  "projects": {
+    "eyebrow": "Highlights",
+    "title": "Selected projects"
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Academic journey"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s collaborate",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "details": "Project details",
+      "button": "Open email draft"
+    },
+    "message": "I respond fastest via email, but you can also reach me on LinkedIn or GitHub if you’d like to learn more about the code powering these projects.",
+    "respects": "The form opens your default email client with a pre-filled message so we can keep communication secure and streamlined."
+  }
+}

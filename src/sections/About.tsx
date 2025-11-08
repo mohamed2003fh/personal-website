@@ -1,6 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { Section } from "../components/layout/Section"
 import { aboutContent } from "../data/profile"
+import { useI18n } from "../i18n/I18nProvider"
 
 const techLogoMap: Record<string, ReactNode> = {
   python: (
@@ -99,18 +100,20 @@ function YearsCounter({ value }: { value: number }) {
 }
 
 export function AboutSection() {
+  const { t } = useI18n()
+  const paragraphs = t.about.paragraphs ?? aboutContent.paragraphs
   return (
     <Section
       id="about"
-      title="Secure-by-design engineering"
-      eyebrow="About"
+      title={t.about.title}
+      eyebrow={t.about.eyebrow}
       frameless
       contentClassName="grid gap-8 lg:grid-cols-[2fr,1fr]"
     >
       <div className="glass-panel relative overflow-hidden p-8">
         <div className="about-orb" aria-hidden="true" />
         <div className="space-y-6">
-          {aboutContent.paragraphs.map((paragraph) => (
+          {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -120,7 +123,7 @@ export function AboutSection() {
           <YearsCounter value={aboutContent.yearsCoding} />
         </div>
         <div className="glass-panel p-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">Security focus</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">{t.about.security_focus}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {aboutContent.securityFocus.map((item) => (
               <span key={item} className="security-chip">
@@ -130,7 +133,7 @@ export function AboutSection() {
           </div>
         </div>
         <div className="glass-panel p-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">Technologies</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">{t.about.technologies}</p>
           <div className="mt-4 grid grid-cols-2 gap-4">
             {aboutContent.techStack.map((tech) => (
               <div key={tech} className="tech-logo">
@@ -141,7 +144,7 @@ export function AboutSection() {
           </div>
         </div>
         <div className="glass-panel p-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">Languages</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-warm/50">{t.about.languages}</p>
           <div className="mt-4 flex flex-wrap gap-3">
             {aboutContent.languages.map((language) => (
               <span key={language.label} className="flag-chip">

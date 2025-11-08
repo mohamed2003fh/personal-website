@@ -2,10 +2,12 @@ import { useState } from "react"
 import { Button } from "../ui/Button"
 import { heroContent, navLinks } from "../../data/profile"
 import { useTheme } from "../theme/ThemeProvider"
+import { useI18n } from "../../i18n/I18nProvider"
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const { locale, setLocale, t } = useI18n()
 
   const handleNavClick = (href: string) => {
     setOpen(false)
@@ -28,16 +30,26 @@ export function Navbar() {
               onClick={() => handleNavClick(link.href)}
               className="transition hover:text-cyber"
             >
-              {link.label}
+              {t.nav[link.label as keyof typeof t.nav]}
             </button>
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
+          <select
+            aria-label="Select language"
+            value={locale}
+            onChange={(e) => setLocale(e.target.value as "en" | "fr" | "ar")}
+            className="rounded-full border border-white/10 bg-transparent px-3 py-2 text-sm text-warm focus:border-cyber focus:outline-none"
+          >
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="ar">AR</option>
+          </select>
           <Button variant="ghost" onClick={toggleTheme} aria-label="Toggle color mode">
             {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
           </Button>
           <Button as="a" href={heroContent.actions[0].href} variant="secondary">
-            Download CV
+            {t.nav.download}
           </Button>
         </div>
         <button
@@ -55,22 +67,32 @@ export function Navbar() {
       </div>
       {open && (
         <div className="border-t border-white/10 bg-midnight/90 px-6 py-4 lg:hidden">
-          <nav className="flex flex-col gap-3 text-sm text-warm/80">
+         <nav className="flex flex-col gap-3 text-sm text-warm/80">
             {navLinks.map((link) => (
               <button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
                 className="text-left"
               >
-                {link.label}
+                {t.nav[link.label as keyof typeof t.nav]}
               </button>
             ))}
             <Button as="a" href={heroContent.actions[0].href} variant="secondary" className="mt-2">
-              Download CV
+              {t.nav.download}
             </Button>
             <Button variant="ghost" onClick={toggleTheme}>
               {theme === "dark" ? "Switch to light" : "Switch to dark"}
             </Button>
+            <select
+              aria-label="Select language"
+              value={locale}
+              onChange={(e) => setLocale(e.target.value as "en" | "fr" | "ar")}
+              className="rounded-full border border-white/10 bg-transparent px-3 py-2 text-sm text-warm focus:border-cyber focus:outline-none"
+            >
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="ar">AR</option>
+            </select>
           </nav>
         </div>
       )}
