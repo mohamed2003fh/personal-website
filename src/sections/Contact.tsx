@@ -28,9 +28,9 @@ export function ContactSection() {
       frameless
       contentClassName="grid gap-10 lg:grid-cols-2"
     >
-      <div className="glass-panel p-6">
+      <div className="glass-panel p-6 text-start">
         <p className="text-sm uppercase tracking-[0.3em] text-warm/50">{contactDetails.availability}</p>
-        <h3 className="mt-3 text-3xl font-heading text-warm">Ready for your next security mission.</h3>
+        <h3 className="mt-3 text-3xl font-heading text-warm">{t.contact.headline}</h3>
         <p className="mt-4 text-sm text-warm/70">{t.contact.message}</p>
         <dl className="mt-6 space-y-4 text-sm">
           <div>
@@ -62,7 +62,7 @@ export function ContactSection() {
           ))}
         </div>
       </div>
-      <div className="glass-panel p-6">
+      <div className="glass-panel p-6 text-start">
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="text-sm text-warm/60" htmlFor="name">

@@ -54,10 +54,10 @@ export const contactDetails = {
 }
 
 export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { id: "about", href: "#about" },
+  { id: "skills", href: "#skills" },
+  { id: "experience", href: "#experience" },
+  { id: "projects", href: "#projects" },
+  { id: "education", href: "#education" },
+  { id: "contact", href: "#contact" },
 ]

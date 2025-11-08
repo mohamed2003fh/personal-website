@@ -1,4 +1,5 @@
 export type ProjectCard = {
+  id: string
   title: string
   timeline: string
   description: string
@@ -11,6 +12,7 @@ export type ProjectCard = {
 
 export const projects: ProjectCard[] = [
   {
+    id: "javafx_media",
     title: "JavaFX Media Explorer",
     timeline: "2023 · L2",
     description:
@@ -22,6 +24,7 @@ export const projects: ProjectCard[] = [
     imageAlt: "Mocked dashboard view of a JavaFX media explorer app",
   },
   {
+    id: "distributed_messaging",
     title: "Distributed Messaging Platform",
     timeline: "2024 · L3",
     description:
@@ -33,6 +36,7 @@ export const projects: ProjectCard[] = [
     imageAlt: "Abstract mesh showing distributed messaging nodes connected by waves",
   },
   {
+    id: "mini_compiler",
     title: "MASM Mini-Compiler",
     timeline: "2025 · L3",
     description:

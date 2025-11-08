@@ -16,14 +16,27 @@
     "cta_download": "Download CV",
     "cta_contact": "Contact",
     "tagline": "Cybersecurity-focused Software Engineer",
-    "summary": "Master 1 Informatique (Fiabilité & Sécurité) student crafting resilient web platforms, secure networked systems, and AI-assisted defenses."
+    "summary": "Master 1 Informatique student crafting resilient web platforms, secure networked systems, and AI-assisted defenses.",
+    "highlights": [
+      "Security audit internship at Tanger Alliance",
+      "JavaFX media explorer & distributed messaging projects",
+      "Trilingual collaborator (Arabic / French / English)"
+    ],
+    "badge": "Cyber Defense • Secure Web • AI"
   },
   "about": {
     "eyebrow": "About",
     "title": "Secure-by-design engineering",
     "years": "years coding",
     "security_focus": "Security focus",
+    "security_focus_list": ["Audit & GRC", "Threat detection", "Networks"],
     "technologies": "Technologies",
+    "tech_labels": {
+      "python": "Python",
+      "java": "Java",
+      "flask": "Flask",
+      "react": "React"
+    },
     "languages": "Languages",
     "paragraphs": [
       "I’m a Master 1 Informatique student at Aix-Marseille Université, specializing in secure software, resilient infrastructure, and AI-assisted defenses.",
@@ -33,23 +46,138 @@
   },
   "skills": {
     "eyebrow": "Capabilities",
-    "title": "Expertise & toolset"
+    "title": "Expertise & toolset",
+    "services": {
+      "security": {
+        "title": "Security Audits",
+        "subtitle": "Policies · Controls · Threat modeling",
+        "bullets": [
+          "Gap analysis and remediation roadmaps",
+          "Phishing awareness modules and simulations",
+          "Hands-on ML prototypes for DDoS detection"
+        ]
+      },
+      "web": {
+        "title": "Secure Web Platforms",
+        "subtitle": "Flask · React · API orchestration",
+        "bullets": [
+          "Authentication flows with data privacy in mind",
+          "Reusable UI systems + accessibility baked in",
+          "DevOps-ready deployments"
+        ]
+      },
+      "networks": {
+        "title": "Networked Systems",
+        "subtitle": "TCP/UDP · threading · observability",
+        "bullets": [
+          "Distributed messaging apps with graceful failover",
+          "Protocol design & instrumentation",
+          "Automation scripts that keep ops lean"
+        ]
+      }
+    },
+    "groups": {
+      "programming": "Programming",
+      "web": "Web",
+      "dataOps": "Data & Ops",
+      "security": "Security",
+      "soft": "Soft skills",
+      "languages": "Languages"
+    }
   },
   "experience": {
     "eyebrow": "Timeline",
-    "title": "Experience & impact"
+    "title": "Experience & impact",
+    "types": {
+      "internship": "Internship",
+      "employment": "Employment",
+      "academic": "Academic"
+    },
+    "entries": {
+      "tanger_alliance": {
+        "role": "Cybersecurity Intern",
+        "bullets": [
+          "Executed end-to-end security audits: policy analysis, controls evaluation, prioritized remediation roadmap.",
+          "Built phishing-awareness modules (training, tests, simulations) improving team readiness.",
+          "Prototyped a machine-learning interface for DDoS detection that surfaced real-time insights to ops teams."
+        ]
+      },
+      "burger_king": {
+        "role": "Crew Member",
+        "bullets": [
+          "Delivered consistent customer experiences during peak hours, reinforcing adaptability and communication.",
+          "Partnered with cross-functional teammates to maintain service speed and quality standards."
+        ]
+      },
+      "amu_projects": {
+        "role": "Academic Projects (L2-L3)",
+        "bullets": [
+          "Led a JavaFX media explorer (team of 5) consuming film/series APIs with robust OOP foundations.",
+          "Engineered a multi-client messaging platform handling TCP/UDP connections, fault tolerance, and custom protocols.",
+          "Developed a MASM mini-compiler with lexical/syntactic analysis and code generation modules."
+        ]
+      }
+    }
   },
   "projects": {
     "eyebrow": "Highlights",
-    "title": "Selected projects"
+    "title": "Selected projects",
+    "entries": {
+      "javafx_media": {
+        "title": "JavaFX Media Explorer",
+        "description": "Desktop experience aggregating movie/series data from public APIs with filtering, watchlists, and role-based flows.",
+        "impact": "Led a 5-person team, enforced SOLID patterns, and shipped a maintainable codebase graded highest in the cohort."
+      },
+      "distributed_messaging": {
+        "title": "Distributed Messaging Platform",
+        "description": "Networked application enabling multiple concurrent clients, custom messaging protocol, and resilience to node outages.",
+        "impact": "Improved reliability testing coverage by simulating packet loss and failover, documenting recovery strategies."
+      },
+      "mini_compiler": {
+        "title": "MASM Mini-Compiler",
+        "description": "Compiler toolchain in NASM/MASM producing assembly from a simplified high-level syntax with lexical + syntax analyzers.",
+        "impact": "Demonstrated strong low-level reasoning and shipping mindset by pairing analysis with verification harnesses."
+      }
+    }
   },
   "education": {
     "eyebrow": "Education",
-    "title": "Academic journey"
+    "title": "Academic journey",
+    "entries": {
+      "m1_fsi": {
+        "program": "Master 1 Informatique (FSI)",
+        "summary": "Advanced coursework across cybersecurity, distributed systems, and compilation.",
+        "highlights": [
+          "Security modules: cryptography, threat modeling, identity/access management",
+          "Network programming with TCP/UDP, multi-threaded sockets, resilience",
+          "Mini-compiler MASM project connecting theory to low-level code generation"
+        ]
+      },
+      "licence": {
+        "program": "Licence Informatique (L2-L3)",
+        "summary": "Full-stack web, algorithmics, and Java engineering foundations.",
+        "highlights": [
+          "JavaFX API media explorer (team lead, MVC, SOLID)",
+          "Flask web app with authentication, routing, and SQL back end",
+          "Distributed messaging platform with custom protocol and fault tolerance"
+        ]
+      },
+      "deust": {
+        "program": "DEUST Sciences & Techniques",
+        "summary": "Core algorithmics, data structures, POO, and web foundations.",
+        "highlights": ["Strengthened mathematical rigor and problem-solving discipline."]
+      },
+      "bac": {
+        "program": "Baccalauréat International - Sciences Physiques",
+        "summary": "Physics-focused track with honors (mention Bien).",
+        "highlights": ["Built the analytical base that fuels today’s engineering mindset."]
+      }
+    }
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s collaborate",
+    "headline": "Ready for your next security mission.",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -58,5 +186,10 @@
     },
     "message": "I respond fastest via email, but you can also reach me on LinkedIn or GitHub if you’d like to learn more about the code powering these projects.",
     "respects": "The form opens your default email client with a pre-filled message so we can keep communication secure and streamlined."
+  },
+  "footer": {
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "resume": "Resume (PDF)"
   }
 }

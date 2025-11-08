@@ -1,67 +1,41 @@
 export type ServiceCard = {
-  title: string
-  subtitle: string
-  bullets: string[]
+  id: "security" | "web" | "networks"
 }
 
 export type SkillGroup = {
-  category: string
+  id: "programming" | "web" | "dataOps" | "security" | "soft" | "languages"
   items: string[]
 }
 
 export const services: ServiceCard[] = [
-  {
-    title: "Security Audits",
-    subtitle: "Policies · Controls · Threat modeling",
-    bullets: [
-      "Gap analysis and remediation roadmaps",
-      "Phishing awareness modules and simulations",
-      "Hands-on ML prototypes for DDoS detection",
-    ],
-  },
-  {
-    title: "Secure Web Platforms",
-    subtitle: "Flask · React · API orchestration",
-    bullets: [
-      "Authentication flows with data privacy in mind",
-      "Reusable UI systems + accessibility baked in",
-      "DevOps-ready deployments on Vercel/Netlify",
-    ],
-  },
-  {
-    title: "Networked Systems",
-    subtitle: "TCP/UDP · threading · observability",
-    bullets: [
-      "Distributed messaging apps with graceful failover",
-      "Protocol design & instrumentation",
-      "Automation scripts that keep ops lean",
-    ],
-  },
+  { id: "security" },
+  { id: "web" },
+  { id: "networks" },
 ]
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Programming",
+    id: "programming",
     items: ["Java", "C", "Python", "JavaFX", "NASM"],
   },
   {
-    category: "Web",
+    id: "web",
     items: ["React", "TypeScript", "Flask", "Tailwind", "Three.js"],
   },
   {
-    category: "Data & Ops",
+    id: "dataOps",
     items: ["SQL", "SQLite", "Git", "Bash"],
   },
   {
-    category: "Security",
+    id: "security",
     items: ["Audit", "Cryptography", "Detection", "Network hardening"],
   },
   {
-    category: "Soft Skills",
+    id: "soft",
     items: ["Team leadership", "Adaptability", "Problem solving", "Productivity"],
   },
   {
-    category: "Languages",
+    id: "languages",
     items: ["Arabic", "French", "English"],
   },
 ]

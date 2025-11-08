@@ -5,6 +5,7 @@ import { useI18n } from "../i18n/I18nProvider"
 
 export function HeroSection() {
   const { t } = useI18n()
+  const highlights = t.hero.highlights ?? heroContent.highlights
   const actions = [
     { href: heroContent.actions[0].href, variant: "primary" as const, label: t.hero.cta_download },
     { href: heroContent.actions[1].href, variant: "secondary" as const, label: t.hero.cta_contact },
@@ -23,11 +24,11 @@ export function HeroSection() {
               </h1>
               <p className="mt-2 font-mono text-sm text-cyber/90">{t.hero.tagline}</p>
             </div>
-            <p className="max-w-2xl text-lg text-warm/80">{t.hero.summary}</p>
+            <p className="max-w-2xl text-lg text-warm/80 text-start">{t.hero.summary}</p>
 
             <ul className="space-y-3 text-sm text-warm/70">
-              {heroContent.highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-start">
                   <span className="mt-1 h-2 w-2 rounded-full bg-cyber/80" />
                   {item}
                 </li>
@@ -74,7 +75,7 @@ export function HeroSection() {
               />
             </div>
             <div className="mt-4 rounded-2xl border border-white/10 bg-midnight/70 px-4 py-2 text-xs font-mono text-warm/80 shadow-card">
-              <p>Cyber Defense • Secure Web • AI</p>
+              <p>{t.hero.badge}</p>
             </div>
           </div>
         </div>

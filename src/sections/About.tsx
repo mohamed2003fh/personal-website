@@ -94,7 +94,6 @@ function YearsCounter({ value }: { value: number }) {
   return (
     <div className="years-counter">
       <span>{displayValue}+</span>
-      <p>years coding</p>
     </div>
   )
 }
@@ -102,6 +101,8 @@ function YearsCounter({ value }: { value: number }) {
 export function AboutSection() {
   const { t } = useI18n()
   const paragraphs = t.about.paragraphs ?? aboutContent.paragraphs
+  const securityFocus = t.about.security_focus_list ?? aboutContent.securityFocus
+  const techLabels = t.about.tech_labels ?? {}
   return (
     <Section
       id="about"
@@ -110,7 +111,7 @@ export function AboutSection() {
       frameless
       contentClassName="grid gap-8 lg:grid-cols-[2fr,1fr]"
     >
-      <div className="glass-panel relative overflow-hidden p-8">
+      <div className="glass-panel relative overflow-hidden p-8 text-start">
         <div className="about-orb" aria-hidden="true" />
         <div className="space-y-6">
           {paragraphs.map((paragraph) => (
@@ -121,11 +122,12 @@ export function AboutSection() {
       <div className="space-y-4">
         <div className="glass-panel p-6 text-center">
           <YearsCounter value={aboutContent.yearsCoding} />
+          <p className="mt-2 text-xs uppercase tracking-[0.3em] text-warm/50">{t.about.years}</p>
         </div>
         <div className="glass-panel p-6">
           <p className="text-xs uppercase tracking-[0.3em] text-warm/50">{t.about.security_focus}</p>
           <div className="mt-4 flex flex-wrap gap-2">
-            {aboutContent.securityFocus.map((item) => (
+            {securityFocus.map((item) => (
               <span key={item} className="security-chip">
                 {item}
               </span>
@@ -138,7 +140,7 @@ export function AboutSection() {
             {aboutContent.techStack.map((tech) => (
               <div key={tech} className="tech-logo">
                 {techLogoMap[tech]}
-                <span>{tech.charAt(0).toUpperCase() + tech.slice(1)}</span>
+                <span>{(techLabels as Record<string, string>)[tech] ?? tech}</span>
               </div>
             ))}
           </div>

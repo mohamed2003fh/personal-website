@@ -8,6 +8,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const { locale, setLocale, t } = useI18n()
+  const navLabels = t.nav as Record<string, string>
 
   const handleNavClick = (href: string) => {
     setOpen(false)
@@ -26,11 +27,11 @@ export function Navbar() {
         <nav className="hidden items-center gap-6 text-sm text-warm/70 lg:flex">
           {navLinks.map((link) => (
             <button
-              key={link.label}
+              key={link.id}
               onClick={() => handleNavClick(link.href)}
               className="transition hover:text-cyber"
             >
-              {t.nav[link.label as keyof typeof t.nav]}
+              {navLabels?.[link.id] ?? link.id}
             </button>
           ))}
         </nav>
@@ -67,14 +68,14 @@ export function Navbar() {
       </div>
       {open && (
         <div className="border-t border-white/10 bg-midnight/90 px-6 py-4 lg:hidden">
-         <nav className="flex flex-col gap-3 text-sm text-warm/80">
+          <nav className="flex flex-col gap-3 text-sm text-warm/80">
             {navLinks.map((link) => (
               <button
-                key={link.label}
+                key={link.id}
                 onClick={() => handleNavClick(link.href)}
                 className="text-left"
               >
-                {t.nav[link.label as keyof typeof t.nav]}
+                {navLabels?.[link.id] ?? link.id}
               </button>
             ))}
             <Button as="a" href={heroContent.actions[0].href} variant="secondary" className="mt-2">

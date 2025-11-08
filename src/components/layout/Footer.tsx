@@ -1,6 +1,9 @@
 import { contactDetails, heroContent, navLinks } from "../../data/profile"
+import { useI18n } from "../../i18n/I18nProvider"
 
 export function Footer() {
+  const { t } = useI18n()
+  const navLabels = t.nav as Record<string, string>
   return (
     <footer className="border-t border-white/10 bg-midnight/80 py-10">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 md:flex-row md:items-start md:justify-between">
@@ -14,19 +17,19 @@ export function Footer() {
         </div>
         <div className="flex flex-1 flex-wrap gap-8 text-sm text-warm/60">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-warm/40">Navigate</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-warm/40">{t.footer.navigate}</p>
             <ul className="mt-3 space-y-2">
               {navLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.id}>
                   <a href={link.href} className="hover:text-cyber">
-                    {link.label}
+                    {navLabels?.[link.id] ?? link.id}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-warm/40">Connect</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-warm/40">{t.footer.connect}</p>
             <ul className="mt-3 space-y-2">
               {contactDetails.socials.map((social) => (
                 <li key={social.label}>
@@ -37,7 +40,7 @@ export function Footer() {
               ))}
               <li>
                 <a href="/assets/cv/Mohamed_Fhafah_CV.pdf" className="hover:text-cyber">
-                  Resume (PDF)
+                  {t.footer.resume}
                 </a>
               </li>
             </ul>

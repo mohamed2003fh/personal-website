@@ -16,40 +16,168 @@
     "cta_download": "Télécharger le CV",
     "cta_contact": "Me contacter",
     "tagline": "Ingénieur logiciel orienté cybersécurité",
-    "summary": "Étudiant en Master 1 Informatique (Fiabilité & Sécurité) concevant des plateformes web résilientes, des systèmes réseau sécurisés et des défenses assistées par IA."
+    "summary": "Étudiant en Master 1 Informatique (Fiabilité & Sécurité) concevant des plateformes web résilientes, des systèmes réseau sécurisés et des défenses assistées par IA.",
+    "highlights": [
+      "Stage en audit de sécurité chez Tanger Alliance",
+      "Projets JavaFX et messagerie distribuée",
+      "Trilingue (arabe / français / anglais)"
+    ],
+    "badge": "Cyber défense • Web sécurisé • IA"
   },
   "about": {
     "eyebrow": "À propos",
     "title": "Ingénierie orientée sécurité",
     "years": "années de code",
     "security_focus": "Axes sécurité",
+    "security_focus_list": ["Audit & GRC", "Détection des menaces", "Réseaux"],
     "technologies": "Technologies",
+    "tech_labels": {
+      "python": "Python",
+      "java": "Java",
+      "flask": "Flask",
+      "react": "React"
+    },
     "languages": "Langues",
     "paragraphs": [
-      "Je suis étudiant en Master 1 Informatique à Aix-Marseille Université, spécialisé dans les logiciels sécurisés, les infrastructures résilientes et les défenses assistées par l’IA.",
-      "Mon parcours couvre les applications web sécurisées avec Flask/JavaScript, le développement Java avancé, la cryptographie et la programmation réseau.",
-      "En dehors du code, j’évolue dans des contextes multiculturels, parle arabe, français et anglais, et reste en forme grâce à la course et la musculation."
+      "Étudiant en Master 1 Informatique à Aix-Marseille Université, je me spécialise dans les logiciels sécurisés, les infrastructures résilientes et les défenses assistées par l'IA.",
+      "Mon parcours couvre les applications web sécurisées (Flask/JavaScript), le développement Java avancé, la cryptographie et la programmation réseau.",
+      "En dehors du code, j'évolue dans des contextes multiculturels, parle arabe, français et anglais, et reste en forme grâce à la course et la musculation."
     ]
   },
   "skills": {
     "eyebrow": "Capacités",
-    "title": "Expertises & outils"
+    "title": "Expertises & outils",
+    "services": {
+      "security": {
+        "title": "Audits de sécurité",
+        "subtitle": "Politiques · Contrôles · Modélisation des menaces",
+        "bullets": [
+          "Analyse d'écart et plans de remédiation",
+          "Modules et simulations de sensibilisation au phishing",
+          "Prototypes IA pour la détection DDoS"
+        ]
+      },
+      "web": {
+        "title": "Plateformes web sécurisées",
+        "subtitle": "Flask · React · Orchestration d'API",
+        "bullets": [
+          "Parcours d'authentification respectant la vie privée",
+          "Systèmes UI réutilisables et accessibles",
+          "Déploiements DevOps-ready"
+        ]
+      },
+      "networks": {
+        "title": "Systèmes distribués",
+        "subtitle": "TCP/UDP · multithreading · observabilité",
+        "bullets": [
+          "Applications de messagerie tolérantes aux pannes",
+          "Conception de protocoles et instrumentation",
+          "Automatisation pour des opérations efficaces"
+        ]
+      }
+    },
+    "groups": {
+      "programming": "Programmation",
+      "web": "Web",
+      "dataOps": "Données & Ops",
+      "security": "Sécurité",
+      "soft": "Soft skills",
+      "languages": "Langues"
+    }
   },
   "experience": {
     "eyebrow": "Parcours",
-    "title": "Expérience & impact"
+    "title": "Expérience & impact",
+    "types": {
+      "internship": "Stage",
+      "employment": "Emploi",
+      "academic": "Académique"
+    },
+    "entries": {
+      "tanger_alliance": {
+        "role": "Stagiaire cybersécurité",
+        "bullets": [
+          "Audit complet des politiques et des contrôles, plan de remédiation priorisé.",
+          "Modules de sensibilisation et simulations de phishing pour renforcer les équipes.",
+          "Prototype IA de détection DDoS avec tableaux de bord temps réel."
+        ]
+      },
+      "burger_king": {
+        "role": "Équipier polyvalent",
+        "bullets": [
+          "Service client constant en période de forte affluence.",
+          "Coordination en équipe pour maintenir vitesse et qualité."
+        ]
+      },
+      "amu_projects": {
+        "role": "Projets académiques (L2-L3)",
+        "bullets": [
+          "Explorateur média JavaFX consommant des API avec une architecture MVC.",
+          "Plateforme de messagerie distribuée gérant TCP/UDP et tolérance aux pannes.",
+          "Mini-compilateur MASM couvrant analyse lexicale et génération de code."
+        ]
+      }
+    }
   },
   "projects": {
     "eyebrow": "Réalisations",
-    "title": "Projets sélectionnés"
+    "title": "Projets sélectionnés",
+    "entries": {
+      "javafx_media": {
+        "title": "Explorateur média JavaFX",
+        "description": "Application bureau agrégant des données films/séries avec filtres et listes.",
+        "impact": "Pilotage d'une équipe de 5, respect des patterns SOLID et meilleur score de la promotion."
+      },
+      "distributed_messaging": {
+        "title": "Plateforme de messagerie distribuée",
+        "description": "Application réseau multi-clients avec protocole personnalisé et résilience.",
+        "impact": "Couverture de tests accrue via simulations de pertes de paquets et de bascules."
+      },
+      "mini_compiler": {
+        "title": "Mini-compilateur MASM",
+        "description": "Chaîne de compilation NASM/MASM produisant de l'assembleur à partir d'un langage simplifié.",
+        "impact": "Démonstration d'une forte maîtrise bas-niveau et de validations automatisées."
+      }
+    }
   },
   "education": {
     "eyebrow": "Formation",
-    "title": "Parcours académique"
+    "title": "Parcours académique",
+    "entries": {
+      "m1_fsi": {
+        "program": "Master 1 Informatique (FSI)",
+        "summary": "Cours avancés en cybersécurité, systèmes distribués et compilation.",
+        "highlights": [
+          "Modules sécurité : cryptographie, IAM, threat modeling",
+          "Programmation réseau TCP/UDP, sockets multithread",
+          "Projet mini-compilateur MASM"
+        ]
+      },
+      "licence": {
+        "program": "Licence Informatique (L2-L3)",
+        "summary": "Bases solides en web full-stack, algorithmique et Java avancé.",
+        "highlights": [
+          "Explorateur média JavaFX (lead, MVC, SOLID)",
+          "Site Flask avec authentification et SQL",
+          "Plateforme de messagerie distribuée"
+        ]
+      },
+      "deust": {
+        "program": "DEUST Sciences & Techniques",
+        "summary": "Fondamentaux en algorithmique, structures de données et POO.",
+        "highlights": ["Renforcement de la rigueur mathématique et de la résolution de problèmes."]
+      },
+      "bac": {
+        "program": "Baccalauréat International – Sciences Physiques",
+        "summary": "Parcours scientifique avec mention Bien.",
+        "highlights": ["Base analytique qui alimente mon approche d'ingénierie."]
+      }
+    }
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Travaillons ensemble",
+    "headline": "Prêt pour votre prochaine mission cybersécurité.",
     "form": {
       "name": "Nom",
       "email": "Email",
@@ -58,5 +186,10 @@
     },
     "message": "Je réponds rapidement par email, mais vous pouvez aussi me joindre sur LinkedIn ou GitHub pour en savoir plus sur mes projets.",
     "respects": "Ce formulaire ouvre votre client mail avec un message prérempli pour garder un échange sécurisé."
+  },
+  "footer": {
+    "navigate": "Navigation",
+    "connect": "Réseaux",
+    "resume": "CV (PDF)"
   }
 }

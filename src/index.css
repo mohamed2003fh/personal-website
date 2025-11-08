@@ -262,3 +262,8 @@ html {
   width: 36px;
   height: 36px;
 }
+
+[dir="rtl"] .flag-chip,
+[dir="rtl"] .tech-logo {
+  flex-direction: row-reverse;
+}
