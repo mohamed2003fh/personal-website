@@ -131,12 +131,38 @@ html {
   outline: none;
 }
 
-.hero-photo-overlay {
+.hero-photo-frame {
+  border: 1px solid rgb(var(--color-border) / 0.4);
+  background: linear-gradient(145deg, rgb(var(--color-midnight)), rgb(var(--color-midnight) / 0.8));
+}
+
+.hero-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(120deg, rgb(var(--color-royal)), rgb(var(--color-cyber)));
+  z-index: 0;
+}
+
+.hero-photo-frame::after {
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 28px;
   background: radial-gradient(circle at 20% 20%, rgb(var(--color-royal) / 0.25), transparent 55%),
-    radial-gradient(circle at 80% 0%, rgb(var(--color-cyber) / 0.2), transparent 45%);
-  mix-blend-mode: screen;
+    radial-gradient(circle at 80% 0%, rgb(var(--color-cyber) / 0.15), transparent 45%);
+  mix-blend-mode: lighten;
+  opacity: 0.4;
   pointer-events: none;
+  z-index: 2;
+}
+
+.hero-photo-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
 }
