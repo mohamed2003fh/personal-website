@@ -20,3 +20,4 @@
 - Added a theme system (CSS variables + ThemeProvider + toggle in the navbar) so the site supports both dark and light modes with stored user preference.
 - Overhauled the visual styling with glass panels, gradient tokens, and a site-wide 3D flow-field background animation for extra depth.
 - Ensured the background animation mounts above the page (with reduced-motion guard) so the effect is visible throughout the site, then removed it per request and kept the cyber grid overlay as the primary backdrop.
+- Refined the hero portrait dimensions (4:5 frame, gradient overlay) so the profile image reads more polished and modern.

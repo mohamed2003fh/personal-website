@@ -57,9 +57,10 @@ export function HeroSection() {
         </div>
 
         <div className="relative flex-1">
-          <div className="glass-panel relative aspect-square w-full max-w-lg overflow-hidden p-0">
-            <HeroCanvas />
-            <div className="absolute inset-8 overflow-hidden rounded-[24px] border border-white/10 shadow-card">
+          <div className="glass-panel relative w-full max-w-md overflow-hidden p-5">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] border border-white/10 bg-midnight">
+              <HeroCanvas />
+              <div className="hero-photo-overlay" />
               <img
                 src="/assets/images/profile.jpg"
                 alt="Portrait of Mohamed Fhafah"
@@ -67,7 +68,7 @@ export function HeroSection() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute bottom-6 left-6 rounded-2xl border border-white/15 bg-midnight/70 px-4 py-2 text-xs font-mono text-warm/80 shadow-card">
+            <div className="mt-4 rounded-2xl border border-white/10 bg-midnight/70 px-4 py-2 text-xs font-mono text-warm/80 shadow-card">
               <p>Cyber Defense • Secure Web • AI</p>
             </div>
           </div>

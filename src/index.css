@@ -130,3 +130,13 @@ html {
   box-shadow: 0 0 0 2px rgb(var(--color-cyber) / 0.25);
   outline: none;
 }
+
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: radial-gradient(circle at 20% 20%, rgb(var(--color-royal) / 0.25), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgb(var(--color-cyber) / 0.2), transparent 45%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
