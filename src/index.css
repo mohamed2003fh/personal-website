@@ -202,3 +202,63 @@ html {
   font-size: 0.85rem;
   color: rgb(var(--color-text));
 }
+
+.info-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 1.5rem;
+  background: radial-gradient(circle at top, rgb(var(--color-royal) / 0.12), transparent 60%),
+    rgb(var(--color-surface) / 0.8);
+  border: 1px solid rgb(var(--color-border) / 0.25);
+  box-shadow: 0 20px 60px -35px rgb(var(--color-royal) / 0.4);
+}
+
+.years-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(var(--color-text));
+}
+
+.years-counter span {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-cyber));
+}
+
+.years-counter p {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.65rem;
+  color: rgb(var(--color-text) / 0.65);
+}
+
+.security-chip {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--color-border) / 0.35);
+  background: rgb(var(--color-surface) / 0.8);
+  font-size: 0.8rem;
+  color: rgb(var(--color-text));
+}
+
+.tech-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 18px;
+  background: rgb(var(--color-surface) / 0.75);
+  border: 1px solid rgb(var(--color-border) / 0.3);
+  box-shadow: inset 0 0 20px rgb(var(--color-royal) / 0.12);
+  color: rgb(var(--color-text));
+  font-weight: 600;
+}
+
+.tech-logo svg {
+  width: 36px;
+  height: 36px;
+}

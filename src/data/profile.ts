@@ -31,11 +31,9 @@ export const aboutContent = {
     "My academic journey spans secure web applications with Flask/JavaScript, advanced Java development, cryptography, and network programming. During my cybersecurity internship at Tanger Alliance I contributed to full security audits, phishing awareness modules, and a machine-learning powered DDoS detection interface.",
     "Beyond code, I thrive in multicultural contexts, speak Arabic, French, and English, and stay sharp through running and strength training. Collaboration, rigor, and empathy are the lenses through which I approach every project.",
   ],
-  stats: [
-    { label: "Years coding", value: "5+" },
-    { label: "Technologies", value: "Java · Python · Flask · Three.js" },
-    { label: "Languages", value: "AR / FR / EN" },
-  ],
+  yearsCoding: 5,
+  securityFocus: ["Audit & GRC", "Threat detection", "Networks"],
+  techStack: ["python", "java", "flask", "react"],
   languages: [
     { flag: "🇲🇦", label: "Arabic · Native" },
     { flag: "🇫🇷", label: "French · Fluent" },
