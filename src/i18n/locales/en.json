@@ -140,6 +140,25 @@
       }
     }
   },
+  "blog": {
+    "eyebrow": "Insights",
+    "title": "Latest blog posts",
+    "cta": "Read article",
+    "entries": {
+      "threat_modeling": {
+        "title": "Threat modeling for lean teams",
+        "excerpt": "How I build lightweight threat models that evolve with startup roadmaps and still satisfy auditors."
+      },
+      "ai_security": {
+        "title": "AI-assisted detection without the hype",
+        "excerpt": "Lessons from prototyping a DDoS classifier and wiring the insights into day-to-day operations."
+      },
+      "network_resilience": {
+        "title": "Designing resilient messaging layers",
+        "excerpt": "Architectural patterns to keep distributed messaging steady when packets drop and nodes disappear."
+      }
+    }
+  },
   "education": {
     "eyebrow": "Education",
     "title": "Academic journey",

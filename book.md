@@ -23,3 +23,4 @@
 - Refined the hero portrait dimensions (4:5 frame, gradient overlay) so the profile image reads more polished and modern, ensuring the photo displays correctly above the gradient frame.
 - Revamped the About section with a glass narrative panel, animated orb accent, and language chips displaying country flags for a more modern, cyber look.
 - Added multilingual support (EN/FR/AR) with an i18n provider, navbar language selector, translated hero/about/contact content, live years counter, animated security chips, and tech logos in the About section.
+- Introduced a three-card blog section with localized titles/excerpts, translated skills/experience/projects/education content, and RTL-aware layout tweaks for Arabic readers.

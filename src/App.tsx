@@ -5,6 +5,7 @@ import { ProjectsSection } from "./sections/Projects"
 import { ContactSection } from "./sections/Contact"
 import { SkillsSection } from "./sections/Skills"
 import { EducationSection } from "./sections/Education"
+import { BlogSection } from "./sections/Blog"
 import { Navbar } from "./components/layout/Navbar"
 import { Footer } from "./components/layout/Footer"
 import { Meta } from "./components/seo/Meta"
@@ -30,6 +31,7 @@ function App() {
           <SkillsSection />
           <ExperienceSection />
           <ProjectsSection />
+          <BlogSection />
           <EducationSection />
           <ContactSection />
         </main>

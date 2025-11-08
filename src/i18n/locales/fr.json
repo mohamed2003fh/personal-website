@@ -140,6 +140,25 @@
       }
     }
   },
+  "blog": {
+    "eyebrow": "Articles",
+    "title": "Derniers billets",
+    "cta": "Lire l’article",
+    "entries": {
+      "threat_modeling": {
+        "title": "Threat modeling pour équipes légères",
+        "excerpt": "Comment je construis des modèles de menaces évolutifs qui restent compatibles avec les exigences d’audit."
+      },
+      "ai_security": {
+        "title": "Détection assistée par IA sans exagération",
+        "excerpt": "Retours d’expérience après un prototype de classifieur DDoS et son intégration dans l’exploitation."
+      },
+      "network_resilience": {
+        "title": "Concevoir une messagerie résiliente",
+        "excerpt": "Patrons d’architecture pour maintenir la stabilité quand les paquets se perdent et que les nœuds tombent."
+      }
+    }
+  },
   "education": {
     "eyebrow": "Formation",
     "title": "Parcours académique",
