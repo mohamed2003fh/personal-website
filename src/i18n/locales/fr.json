@@ -4,6 +4,7 @@
     "skills": "Compétences",
     "experience": "Expérience",
     "projects": "Projets",
+    "blog": "Blog",
     "education": "Formation",
     "contact": "Contact",
     "download": "Télécharger le CV"
@@ -147,15 +148,27 @@
     "entries": {
       "threat_modeling": {
         "title": "Threat modeling pour équipes légères",
-        "excerpt": "Comment je construis des modèles de menaces évolutifs qui restent compatibles avec les exigences d’audit."
+        "excerpt": "Comment je construis des modèles de menaces évolutifs qui restent compatibles avec les exigences d’audit.",
+        "content": [
+          "Un modèle de menaces n’a de valeur que s’il évolue avec la feuille de route. Je détaille le template que j’utilise avec les petites équipes : une page, trois couches (actifs, chemins d’attaque, dette de contrôle) et une mise à jour hebdomadaire. L’objectif est d’en faire un outil de priorisation vivant.",
+          "Je décris aussi l’automatisation légère (issues GitHub + captures Miro) qui satisfait les auditeurs sans imposer d’outils lourds."
+        ]
       },
       "ai_security": {
         "title": "Détection assistée par IA sans exagération",
-        "excerpt": "Retours d’expérience après un prototype de classifieur DDoS et son intégration dans l’exploitation."
+        "excerpt": "Retours d’expérience après un prototype de classifieur DDoS et son intégration dans l’exploitation.",
+        "content": [
+          "Le secret d’un détecteur piloté par IA réside dans la donnée. J’explique comment nous avons extrait les bons signaux des load balancers et pourquoi l’ingénierie de features a plus compté que le choix du modèle.",
+          "La seconde partie traite du déploiement : alertes explicables dans les outils SOC et mesure de la précision pour gagner la confiance des analystes."
+        ]
       },
       "network_resilience": {
         "title": "Concevoir une messagerie résiliente",
-        "excerpt": "Patrons d’architecture pour maintenir la stabilité quand les paquets se perdent et que les nœuds tombent."
+        "excerpt": "Patrons d’architecture pour maintenir la stabilité quand les paquets se perdent et que les nœuds tombent.",
+        "content": [
+          "La messagerie distribuée casse souvent dans les scénarios inattendus. Je partage des retours d’incidents (orages de paquets, coupures partielles) et les trois leviers qui ont aidé : acquittements par quorum, back-pressure adaptatif, coupe-circuits.",
+          "Des schémas illustrent aussi la façon dont les hooks d’observabilité (éditeurs synthétiques + histogrammes de latence) ont apporté de la confiance lors des déploiements multi-régions."
+        ]
       }
     }
   },

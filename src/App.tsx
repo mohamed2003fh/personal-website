@@ -6,6 +6,7 @@ import { ContactSection } from "./sections/Contact"
 import { SkillsSection } from "./sections/Skills"
 import { EducationSection } from "./sections/Education"
 import { BlogSection } from "./sections/Blog"
+import { BlogArticlesSection } from "./sections/BlogArticles"
 import { Navbar } from "./components/layout/Navbar"
 import { Footer } from "./components/layout/Footer"
 import { Meta } from "./components/seo/Meta"
@@ -32,6 +33,7 @@ function App() {
           <ExperienceSection />
           <ProjectsSection />
           <BlogSection />
+          <BlogArticlesSection />
           <EducationSection />
           <ContactSection />
         </main>

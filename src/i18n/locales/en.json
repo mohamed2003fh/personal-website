@@ -4,6 +4,7 @@
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
+    "blog": "Blog",
     "education": "Education",
     "contact": "Contact",
     "download": "Download CV"
@@ -147,15 +148,27 @@
     "entries": {
       "threat_modeling": {
         "title": "Threat modeling for lean teams",
-        "excerpt": "How I build lightweight threat models that evolve with startup roadmaps and still satisfy auditors."
+        "excerpt": "How I build lightweight threat models that evolve with startup roadmaps and still satisfy auditors.",
+        "content": [
+          "Threat modeling is only useful if the exercise stays alive as the roadmap evolves. In this article I show the template I use with small teams: one page, three layers (assets, attack paths, control debt) and a weekly update cadence. The goal is to turn the model into a living prioritization tool, not a static document.",
+          "I also cover how we used lightweight automation (GitHub issues + miro snapshots) to keep auditors happy without locking the team into heavyweight tooling."
+        ]
       },
       "ai_security": {
         "title": "AI-assisted detection without the hype",
-        "excerpt": "Lessons from prototyping a DDoS classifier and wiring the insights into day-to-day operations."
+        "excerpt": "Lessons from prototyping a DDoS classifier and wiring the insights into day-to-day operations.",
+        "content": [
+          "Building an AI-driven detector starts with curating the right features. I explain how we gathered high-signal data from load balancers and why feature engineering mattered more than model selection.",
+          "The second half focuses on deployment: surfacing explainable alerts in the SOC tooling and measuring precision/recall so the model actually earns analysts’ trust."
+        ]
       },
       "network_resilience": {
         "title": "Designing resilient messaging layers",
-        "excerpt": "Architectural patterns to keep distributed messaging steady when packets drop and nodes disappear."
+        "excerpt": "Architectural patterns to keep distributed messaging steady when packets drop and nodes disappear.",
+        "content": [
+          "Distributed messaging breaks in surprising ways. I share failure stories (packet storms, partial outages) and the three architectural levers that helped: quorum-based acknowledgements, adaptive back-pressure, and circuit breakers.",
+          "You’ll also find diagrams showing how observability hooks (synthetic publishers + latency histograms) gave us confidence when rolling out new regions."
+        ]
       }
     }
   },
