@@ -1,16 +1,10 @@
-import { HeroSection } from "./sections/Hero"
-import { AboutSection } from "./sections/About"
-import { ExperienceSection } from "./sections/Experience"
-import { ProjectsSection } from "./sections/Projects"
-import { ContactSection } from "./sections/Contact"
-import { SkillsSection } from "./sections/Skills"
-import { EducationSection } from "./sections/Education"
-import { BlogSection } from "./sections/Blog"
-import { BlogArticlesSection } from "./sections/BlogArticles"
 import { Navbar } from "./components/layout/Navbar"
 import { Footer } from "./components/layout/Footer"
 import { Meta } from "./components/seo/Meta"
 import { Analytics } from "./components/analytics/Analytics"
+import { Routes, Route, Navigate } from "react-router-dom"
+import { HomePage } from "./pages/HomePage"
+import { BlogArticlePage } from "./pages/BlogArticlePage"
 
 function App() {
   return (
@@ -26,17 +20,11 @@ function App() {
           Skip to content
         </a>
         <Navbar />
-        <HeroSection />
-        <main id="main">
-          <AboutSection />
-          <SkillsSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <BlogSection />
-          <BlogArticlesSection />
-          <EducationSection />
-          <ContactSection />
-        </main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog/:id" element={<BlogArticlePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
         <Footer />
       </div>
     </div>

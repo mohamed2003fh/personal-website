@@ -26,7 +26,7 @@ export function BlogSection() {
             <h3 className="text-2xl font-heading text-warm">{copy.title}</h3>
             <p className="text-sm text-warm/70">{copy.excerpt}</p>
             <div className="mt-auto">
-              <Button as="a" href={`#blog-${post.id}`} variant="secondary">
+              <Button as="a" href={`/blog/${post.id}`} variant="secondary">
                 {t.blog.cta}
               </Button>
             </div>
