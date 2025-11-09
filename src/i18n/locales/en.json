@@ -150,24 +150,27 @@
         "title": "Threat modeling for lean teams",
         "excerpt": "How I build lightweight threat models that evolve with startup roadmaps and still satisfy auditors.",
         "content": [
-          "Threat modeling is only useful if the exercise stays alive as the roadmap evolves. In this article I show the template I use with small teams: one page, three layers (assets, attack paths, control debt) and a weekly update cadence. The goal is to turn the model into a living prioritization tool, not a static document.",
-          "I also cover how we used lightweight automation (GitHub issues + miro snapshots) to keep auditors happy without locking the team into heavyweight tooling."
+          "Threat modeling only adds value when it keeps pace with the roadmap. I use a single-page canvas with three layers: assets I care about today, attack paths that actually matter for those assets, and control debt that we accept temporarily. Every sprint review starts with five minutes on this canvas; we either close a risk, log a mitigation issue, or accept it for the next sprint. The lightweight ritual keeps the document alive and gives PMs and engineers the same picture of risk.",
+          "To stop the model from becoming a compliance-heavy artifact, I wired the canvas to GitHub. Each attack path references an issue label, so when engineers close a mitigation the canvas automatically updates. Auditors still get what they want—a historical view of risks and decisions—while engineers never leave their existing workflow. The article walks through the automation script and the set of questions I use with stakeholders to calibrate risk discussions.",
+          "The last section dives into metrics. Rather than inventing new KPIs, I track the time between identifying a threat and issuing a mitigation pull request, plus the percentage of features released without touching the canvas. If either metric gets worse, we know the model needs to shrink or governance needs to lighten up."
         ]
       },
       "ai_security": {
         "title": "AI-assisted detection without the hype",
         "excerpt": "Lessons from prototyping a DDoS classifier and wiring the insights into day-to-day operations.",
         "content": [
-          "Building an AI-driven detector starts with curating the right features. I explain how we gathered high-signal data from load balancers and why feature engineering mattered more than model selection.",
-          "The second half focuses on deployment: surfacing explainable alerts in the SOC tooling and measuring precision/recall so the model actually earns analysts’ trust."
+          "When we built a DDoS classifier, the biggest challenge wasn’t the model—it was identifying signals that operations teams trusted. I describe how we tapped directly into the load balancer’s connection table, transformed raw counters into rolling z-scores, and used them as model features. A simple gradient-boosted tree beat fancier deep models because the features captured the intuition of seasoned network engineers.",
+          "Getting alerts into analysts’ hands required explainability. Each prediction ships with the top three contributing features and a suggested remediation playbook. Analysts can click a payload to replay the timeline of inbound traffic, which turned the model from a black box into a companion. I also share our precision/recall targets and why we tune them differently during product launches versus normal traffic.",
+          "Finally, the article covers ongoing maintenance. We scheduled monthly drift reviews, automated retraining pipelines, and defined a rollback checklist so the SOC can disable the classifier safely if it misbehaves during an incident. AI defenses only work when people trust them; transparent processes are the fastest way to earn that trust."
         ]
       },
       "network_resilience": {
         "title": "Designing resilient messaging layers",
         "excerpt": "Architectural patterns to keep distributed messaging steady when packets drop and nodes disappear.",
         "content": [
-          "Distributed messaging breaks in surprising ways. I share failure stories (packet storms, partial outages) and the three architectural levers that helped: quorum-based acknowledgements, adaptive back-pressure, and circuit breakers.",
-          "You’ll also find diagrams showing how observability hooks (synthetic publishers + latency histograms) gave us confidence when rolling out new regions."
+          "Distributed messaging fails in subtle ways. The story starts with a mid-release outage where a packet storm caused half the brokers to think the other half were dead. From that chaos we developed three patterns: quorum-based acknowledgements to avoid split-brain, adaptive back-pressure to stop producers from overwhelming lagging regions, and circuit breakers that isolate toxic traffic before it cascades.",
+          "The article then moves to observability. Synthetic publishers pump predictable workloads into every region and measure percentiles on every hop, while consumer lag dashboards show whether messages queue up unevenly. Those signals taught us to deploy new regions gradually and gave stakeholders the confidence to let us experiment.",
+          "I close with operational drills. Once a month we intentionally fail a broker and rehearse the runbook, logging the time to detection and time to recovery. The combination of architecture, telemetry, and practice is what makes the messaging plane feel resilient rather than lucky."
         ]
       }
     }

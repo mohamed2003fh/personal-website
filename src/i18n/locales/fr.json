@@ -150,24 +150,27 @@
         "title": "Threat modeling pour équipes légères",
         "excerpt": "Comment je construis des modèles de menaces évolutifs qui restent compatibles avec les exigences d’audit.",
         "content": [
-          "Un modèle de menaces n’a de valeur que s’il évolue avec la feuille de route. Je détaille le template que j’utilise avec les petites équipes : une page, trois couches (actifs, chemins d’attaque, dette de contrôle) et une mise à jour hebdomadaire. L’objectif est d’en faire un outil de priorisation vivant.",
-          "Je décris aussi l’automatisation légère (issues GitHub + captures Miro) qui satisfait les auditeurs sans imposer d’outils lourds."
+          "Un modèle de menaces n’a de valeur que s’il évolue avec la feuille de route produit. J’utilise un canevas d’une page découpé en trois couches : actifs critiques, chemins d’attaque plausibles, dette de contrôle que nous acceptons temporairement. Chaque revue de sprint commence par cinq minutes sur ce canevas ; nous décidons soit de fermer un risque, soit d’ouvrir une tâche, soit d’assumer le risque jusqu’au sprint suivant. Le modèle reste ainsi vivant et partagé par les PMs et les développeurs.",
+          "Pour éviter que l’exercice ne devienne bureaucratique, nous l’avons relié à GitHub. Chaque chemin d’attaque est associé à une étiquette et, lorsque la PR de mitigation est fusionnée, le canevas se met à jour automatiquement. Les auditeurs disposent d’un historique complet tandis que l’équipe ne quitte jamais son flux de travail habituel.",
+          "Enfin, je parle de mesure : nous suivons le temps entre l’identification d’un risque et sa mitigation, ainsi que la part de fonctionnalités publiées sans passer par le canevas. Si ces métriques se dégradent, nous savons qu’il est temps de simplifier le modèle ou d’assouplir la gouvernance."
         ]
       },
       "ai_security": {
         "title": "Détection assistée par IA sans exagération",
         "excerpt": "Retours d’expérience après un prototype de classifieur DDoS et son intégration dans l’exploitation.",
         "content": [
-          "Le secret d’un détecteur piloté par IA réside dans la donnée. J’explique comment nous avons extrait les bons signaux des load balancers et pourquoi l’ingénierie de features a plus compté que le choix du modèle.",
-          "La seconde partie traite du déploiement : alertes explicables dans les outils SOC et mesure de la précision pour gagner la confiance des analystes."
+          "Le succès d’un détecteur IA dépend d’abord des signaux. Nous avons connecté directement les load balancers et transformé les compteurs bruts en z-scores glissants, ce qui a permis à un simple modèle d’arbres boostés de surpasser des architectures profondes. Je détaille la pipeline et les raisons pour lesquelles l’ingénierie de features a été plus décisive que le choix de l’algorithme.",
+          "Pour gagner la confiance des analystes, chaque alerte affiche les trois features les plus contributrices et le playbook proposé. Les analystes peuvent rejouer la chronologie du trafic pour vérifier le verdict. Je partage aussi nos objectifs de précision/rappel, différents lors des pics marketing et des périodes calmes.",
+          "J’explique enfin comment nous maintenons le modèle : revues de dérive mensuelles, pipeline de ré-entraînement automatisé, et checklist de rollback permettant au SOC de désactiver le classifieur sans panique."
         ]
       },
       "network_resilience": {
         "title": "Concevoir une messagerie résiliente",
         "excerpt": "Patrons d’architecture pour maintenir la stabilité quand les paquets se perdent et que les nœuds tombent.",
         "content": [
-          "La messagerie distribuée casse souvent dans les scénarios inattendus. Je partage des retours d’incidents (orages de paquets, coupures partielles) et les trois leviers qui ont aidé : acquittements par quorum, back-pressure adaptatif, coupe-circuits.",
-          "Des schémas illustrent aussi la façon dont les hooks d’observabilité (éditeurs synthétiques + histogrammes de latence) ont apporté de la confiance lors des déploiements multi-régions."
+          "La messagerie distribuée casse dans les scénarios les plus improbables. Je raconte une panne où une tempête de paquets a provoqué un split-brain puis les trois armes qui nous ont sauvés : acquittements par quorum, back-pressure adaptatif, coupe-circuits isolant les flux toxiques.",
+          "Je décris ensuite l’observabilité qui nous a permis de dormir la nuit. Des éditeurs synthétiques injectent des charges connues dans chaque région, les histogrammes de latence tracent l’état du réseau en temps réel, et nous ne déployons un nouveau cluster qu’après avoir observé ces courbes pendant vingt-quatre heures.",
+          "Le billet se termine par nos exercices réguliers : nous simulons la perte d’un broker et mesurons le temps de détection et de récupération. L’architecture, la télémétrie et ces drills forment un triptyque qui rend la plateforme réellement résiliente."
         ]
       }
     }
